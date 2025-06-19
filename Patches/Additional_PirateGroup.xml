@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationAdd">
+                <xpath>
+                    Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                <value>
+                    <Mech_ToxCentipedeGunner>0.5</Mech_ToxCentipedeGunner>
+                    <Mech_TekCentipedeToxic>0.2</Mech_TekCentipedeToxic>
+                    <Mech_Quadmin>0.5</Mech_Quadmin>
+                    <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                    <Mech_CentipedeBlaster>0.5</Mech_CentipedeBlaster>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>
+                    Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+                <value>
+                    <Mech_Quadmin>2</Mech_Quadmin>
+                    <Mech_ToxCentipedeGunner>2</Mech_ToxCentipedeGunner>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>
+                    Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
+                <value>
+                    <Mech_ToxCentipedeGunner>3</Mech_ToxCentipedeGunner>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <li Class="PatchOperationAdd">
+        <xpath>
+            Defs/FactionDef[defName="OutlanderCivil"]/pawnGroupMakers/li[kindDef="Trader"]/options</xpath>
+        <value>
+            <Mech_ToxCentipedeGunner>1</Mech_ToxCentipedeGunner>
+            <Mech_TekCentipedeToxic>1</Mech_TekCentipedeToxic>
+            <Mech_TekCentipedeBlaster>1</Mech_TekCentipedeBlaster>
+            <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
+            <Mech_CentipedeGunner>3</Mech_CentipedeGunner>
+        </value>
+    </li>
+
+</Patch>

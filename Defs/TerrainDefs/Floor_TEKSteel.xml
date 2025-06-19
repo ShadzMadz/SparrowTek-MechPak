@@ -1,0 +1,20 @@
+<Defs>
+  <TerrainDef ParentName="TileMetalBase">
+    <defName>Floor_TEKSteelTile</defName>
+    <label>TEKsteel tile</label>
+    <description>Clean, durable TEKsteel tiles with a high-tech finish.</description>
+    <designationCategory>Floors</designationCategory>
+    <color>(0.16, 0.16, 0.16)</color>
+    <statBases>
+      <WorkToBuild>900</WorkToBuild>
+      <Beauty>1</Beauty>
+      <Cleanliness>0.3</Cleanliness>
+      <CleaningTimeFactor>0.6</CleaningTimeFactor>
+    </statBases>
+    <costList>
+      <TEKSteel>6</TEKSteel>
+    </costList>
+    <uiIconPath>Terrain/Floor_TEKSteelTile</uiIconPath>
+    <uiOrder>2041</uiOrder>
+  </TerrainDef>
+</Defs>

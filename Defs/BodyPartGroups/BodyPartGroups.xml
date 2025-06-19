@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Group for shielded parts -->
+  <BodyPartGroupDef>
+    <defName>CoveredByShield</defName>
+    <label>shield</label>
+    <hitPoints>550</hitPoints>
+  </BodyPartGroupDef>
+
+  <!-- CORE STRUCTURE -->
+  <BodyPartDef>
+    <defName>MechanicalThorax</defName>
+    <label>thorax</label>
+    <hitPoints>200</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalNeck</defName>
+    <label>neck</label>
+    <hitPoints>50</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalHead</defName>
+    <label>head</label>
+    <hitPoints>80</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <!-- MOBILITY -->
+  <BodyPartDef>
+    <defName>MechanicalLeg</defName>
+    <label>leg</label>
+    <hitPoints>120</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalFoot</defName>
+    <label>foot</label>
+    <hitPoints>60</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingFoot</li>
+    </tags>
+  </BodyPartDef>
+
+  <!-- MANIPULATION -->
+  <BodyPartDef>
+    <defName>MechanicalShoulder</defName>
+    <label>shoulder</label>
+    <hitPoints>100</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalArm</defName>
+    <label>arm</label>
+    <hitPoints>150</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalHand</defName>
+    <label>hand</label>
+    <hitPoints>80</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalFinger</defName>
+    <label>finger</label>
+    <hitPoints>30</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+
+  <!-- TOOLS & WEAPONS -->
+  <BodyPartDef>
+    <defName>gunBarrel</defName>
+    <label>gun barrel</label>
+    <hitPoints>15</hitPoints>
+    <alive>false</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbCore</li>
+      <li>ManipulationLimbSegment</li>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+
+  <!-- SENSORS & PROCESSORS -->
+  <BodyPartDef>
+    <defName>ShieldWindow</defName>
+    <label>shield window</label>
+    <hitPoints>170</hitPoints>
+    <alive>false</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>SightSource</li>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SightSensor</defName>
+    <label>sight sensor</label>
+    <hitPoints>25</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>HearingSensor</defName>
+    <label>hearing sensor</label>
+    <hitPoints>25</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SmellSensor</defName>
+    <label>smell sensor</label>
+    <hitPoints>20</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>SmellingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>ArtificialBrain</defName>
+    <label>processor core</label>
+    <hitPoints>50</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>FluidReprocessor</defName>
+    <label>fluid reprocessor</label>
+    <hitPoints>60</hitPoints>
+    <alive>true</alive>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedR
