@@ -556,12 +556,12 @@
         <range>30</range>
 		<minRange>0</minRange>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
         <soundCast>Tek_Blaster</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
 		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<defaultCooldownTime>15</defaultCooldownTime>
+		<defaultCooldownTime>9</defaultCooldownTime>
       </li>
     </verbs>
   </ThingDef>
