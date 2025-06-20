@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <!-- Gaurdian -->
+  
+
+  <BodyPartDef>
+    <defName>HexShieldPlate</defName>
+    <label>HexShieldPlate</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	    <tags>
+      <li>BloodFiltrationSource</li>
+	  <li>BloodPumpingSource</li>
+	  <li>ConsciousnessSource</li>
+	   <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+  </BodyPartDef>
+  
+ 
+   <BodyPartDef ParentName="MechanicalCentipedeRingBase">
+    <defName>MechanicalCentipedeBodySeventhRing</defName>
+    <label>seventh body ring</label>
+    <hitPoints>15</hitPoints>
+  </BodyPartDef>
+ 
+
+</Defs>

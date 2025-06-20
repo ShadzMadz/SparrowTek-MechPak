@@ -1,0 +1,26 @@
+<Defs>
+
+<RecipeDef>
+  <defName>MakeTEKSteel_Machining</defName>
+  <label>craft TEK steel (crude process)</label>
+  <jobString>Fusing steel and plasteel into TEK steel...</jobString>
+  <workAmount>900</workAmount>
+  <workSpeedStat>SmithingSpeed</workSpeedStat>
+  <effectWorking>ConstructMetal</effectWorking>
+  <soundWorking>Recipe_Smith</soundWorking>
+  <recipeUsers>
+    <li>TableMachining</li>
+  </recipeUsers>
+<costList>
+<Plasteel>5</Plasteel>
+<Steel>25</Steel>
+</costList>
+<recipeMaker>
+  <products>
+    <TEKSteel>1</TEKSteel>
+  </products>
+  <skillRequirements>
+    <Crafting>5</Crafting>
+  </skillRequirements>
+</RecipeDef>
+</Defs>
