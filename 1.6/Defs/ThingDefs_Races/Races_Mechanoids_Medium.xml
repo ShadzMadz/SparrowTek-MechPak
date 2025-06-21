@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ThingDef for Tek Scyther Mechanoid -->
+  <!-- ============================= Defender ================================= -->
+
+  <ThingDef ParentName="BaseMechanoidWalker">
+  <defName>Mech_TekScyther_Blue</defName>
+  <label>Tek Scyther Blue</label>
+  <description>
+    A special Melee mechanoid baring resemblence to the mechanoids Scythers, Sparrow Tek's Scythers are special, often used as body guards to VIPs or high class individuals on glitter worlds.
+  </description>
+
+
+  <statBases>
+    <MoveSpeed>6</MoveSpeed>
+    <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+    <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+    <BandwidthCost>2</BandwidthCost>
+    <EnergyShieldRechargeRate>0.3</EnergyShieldRechargeRate>
+    <EnergyShieldEnergyMax>1.4</EnergyShieldEnergyMax>
+    <IncomingDamageFactor>0.90</IncomingDamageFactor>
+  </statBases>
+
+  <comps>
+    <li Class="CompProperties_ProjectileInterceptor">
+      <radius>0.85</radius>
+      <interceptGroundProjectiles>true</interceptGroundProjectiles>
+      <color>(0, 0, 1)</color>
+      <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+      <activeSound>STEK_Sheild_Ambience</activeSound>
+      <hitPoints>125</hitPoints>
+      <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+      <chargeDurationTicks>5400</chargeDurationTicks>
+      <drawWithNoSelection>True</drawWithNoSelection>
+      <disarmedByEmpForTicks>7400</disarmedByEmpForTicks>
+      <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+    </li>
+    <li Class="Mech_Invisibility.CompProperties_Invisibility">
+      <durationTicksRange>900~1800</durationTicksRange>
+  <hediff>Mech_TekLancer_Invisibility</hediff>
+    </li>
+  </comps>
+
+  <tools>
+    <li>
+      <label>MechanicalHead</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>17</power>
+      <cooldownTime>1.8</cooldownTime>
+      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+    </li>
+    <li>
+      <label>Right Tek Blade</label>
+      <capacities>
+        <li>Cut</li>
+        <li>Stab</li>
+        <li>Stun</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>1.8</cooldownTime>
+      <linkedBodyPartsGroup>RightTekScytherBlade</linkedBodyPartsGroup>
+      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+    </li>
+    <li>
+      <label>Left Tek Blade</label>
+      <capacities>
+        <li>Cut</li>
+        <li>Stab</li>
+        <li>Burn</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>1.8</cooldownTime>
+      <linkedBodyPartsGroup>LeftTekScytherBlade</linkedBodyPartsGroup>
+      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+    </li>
+  </tools>
+
+  <race>
+    <body>Mech_TekScyther_Blue</body>
+    <baseBodySize>1.2</baseBodySize>
+    <baseHealthScale>2</baseHealthScale>
+    <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+    <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+    <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    <lifeStageAges Inherit="False">
+      <li>
+        <def>MechanoidFullyFormed</def>
+        <minAge>0</minAge>
+        <soundWounded>SmallSTEKDamaged</soundWounded>
+        <soundDeath>STEKSmallDeath</soundDeath>
+        <soundCall>STEKsmallAmbience</soundCall>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <def>MechanoidFullyFormed</def>
+        <minAge>100</minAge>
+        <soundWounded>SmallSTEKDamaged</soundWounded>
+        <soundDeath>STEKSmallDeath</soundDeath>
+        <soundCall>STEKsmallAmbience</soundCall>
+      </li>
+    </lifeStageAges>
+    <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+    <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+    <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+    <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    <mechWeightClass>Heavy</mechWeightClass>
+  </race>
+
+  <butcherProducts>
+    <TEKSteel>25</TEKSteel>
+    <Plasteel>25</Plasteel>
+  </butcherProducts>
+</ThingDef>
+
+
+
+
+<PawnKindDef ParentName="BaseMechanoidKind">
+  <defName>Mech_TekScyther_Blue</defName>
+  <label>Tek Scyther Blue</label>
+  <race>Mech_TekScyther_Blue</race>
+  <combatPower>340</combatPower>
+
+  <!-- No weapons should be generated -->
+  <abilities>
+  <li>SmokepopMech</li>
+  <li>Mech_TekScyther_Invisibility</li>
+  </abilities>
+  <weaponMoney>
+    <min>9999</min>
+    <max>9999</max>
+  </weaponMoney>
+  <weaponTags>
+  </weaponTags>
+
+  <lifeStages>
+    <li MayRequire="Ludeon.RimWorld.Biotech">
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1</drawSize>
+        <shadowData>
+          <volume>(0.4, 0.8, 0.4)</volume>
+        </shadowData>
+      </bodyGraphicData>
+    </li>
+    <li>
+      <bodyGraphicData>
+        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
+        <shaderType>CutoutWithOverlay</shaderType>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>1</drawSize>
+        <shadowData>
+          <volume>(0.4, 0.8, 0.4)</volume>
+        </shadowData>
+      </bodyGraphicData>
+    </li>
+  </lifeStages>
+
+</PawnKindDef>
+
+
+<AbilityDef>
+ <defName>Mech_TekScyther_Invisibility</defName>
+ <label>Active cloak</label>
+ <description>tex.todo</description>
+ <iconPath>UI/Abilities/MechSmokepop</iconPath>
+ <targetRequired>false</targetRequired>
+ <hostile>false</hostile>
+ <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+ <verbProperties>
+   <verbClass>Verb_CastAbility</verbClass>
+   <warmupTime>1</warmupTime>
+   <drawAimPie>false</drawAimPie>
+ <range>-1</range>
+   <targetParams>
+     <canTargetSelf>true</canTargetSelf>
+   </targetParams>
+ </verbProperties>
+ <comps>
+   <li Class="Mech_TekLancer_White.CompProperties_Invisibility">
+     <durationTicksRange>900~1800</durationTicksRange>
+ <hediff>Mech_TekScyther_Invisibility</hediff>
+   </li>
+ </comps>
+</AbilityDef>
+
+<HediffDef>
+ <defName>Mech_TekScyther_Invisibility</defName>
+ <label>invisibility</label>
+ <hediffClass>HediffWithComps</hediffClass>
+ <description>text.todo.</description>
+ <isBad>false</isBad>
+ <comps>
+   <li Class="HediffCompProperties_Invisibility">
+     <visibleToPlayer>true</visibleToPlayer>
+   </li>
+   <li Class="HediffCompProperties_Disappears">
+     <showRemainingTime>True</showRemainingTime>
+   </li>
+   <li Class="HediffCompProperties_DisappearsOnDeath"/>
+ </comps>
+</HediffDef>
+
+
+
+
+</Defs>
