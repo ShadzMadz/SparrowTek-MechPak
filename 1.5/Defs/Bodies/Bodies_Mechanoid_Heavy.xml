@@ -186,7 +186,7 @@
 
   <corePart>
     <def>MechanicalCentipedeBodyFirstRing</def>
-    <height>Undefined</height>
+    <height>Middle</height>
     <depth>Outside</depth>
     <coverage>0.20</coverage>
     <parts>
@@ -361,7 +361,7 @@
 <corePart>
   <def>MechanicalThoraxCanManipulate</def>
   <customLabel>Arachnoid Body</customLabel>
-  <height>Undefined</height>
+  <height>Middle</height>
   <depth>Outside</depth>
   <coverage>0.30</coverage>
   <parts>
@@ -613,7 +613,7 @@
 <corePart>
   <def>MechanicalThoraxCanManipulate</def>
   <customLabel>Arachnoid Body</customLabel>
-  <height>Undefined</height>
+  <height>Middle</height>
   <depth>Outside</depth>
   <coverage>0.30</coverage>
   <parts>
