@@ -170,7 +170,7 @@
     <label>Tek Lancer Red</label>
     <corePart>
       <def>MechanicalThorax</def>
-      <customlabel>Mechanical Torso</customlabel>
+      <customLabel>Mechanical Torso</customLabel>
       <height>Middle</height>
       <depth>Outside</depth>
       <parts>
@@ -330,7 +330,7 @@
     <label>Tek Lancer Blue</label>
     <corePart>
       <def>MechanicalThorax</def>
-      <customlabel>Mechanical Torso</customlabel>
+      <customLabel>Mechanical Torso</customLabel>
       <height>Middle</height>
       <depth>Outside</depth>
       <parts>
