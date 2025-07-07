@@ -887,4 +887,266 @@
 
 
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+  <value>
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>Mech_TekScyther_Blue</defName>
+    <label>gestate Blue Tek Scyther Blue Mech</label>
+    <description>Gestate a Tek Scyther mech.</description>
+    <gestationCycles>3</gestationCycles>
+    <researchPrerequisite>HighMechtech</researchPrerequisite>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TEKSteel</li>
+          </thingDefs>
+        </filter>
+        <count>60</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreHigh</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_TekScyther_Blue>1</Mech_TekScyther_Blue>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_TekScyther_Blue</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+	  </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+  <order>Prepend</order>
+  <value>
+      <li>Mech_TekScyther_Blue</li>
+  </value>
+</Operation>
+
+<!-- Heavy Mech Ressurection Recipe Patches -->
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs/li</xpath>
+		<value>
+			<li>Corpse_Mech_TekScyther_Blue</li>
+		</value>
+	</Operation>
+
+
+
+
+  <Operation Class="PatchOperationAdd">
+      <xpath>/Defs</xpath>
+    <value>
+    <RecipeDef ParentName="HeavyMechanoidRecipe">
+      <defName>Mech_TekChef</defName>
+      <label>gestate Tek Chef Mech</label>
+      <description>Gestate a Tek Chef mech.</description>
+      <gestationCycles>1</gestationCycles>
+      <researchPrerequisite>BasicMechtech</researchPrerequisite>
+      <ingredients Inherit="False">
+        <li>
+          <filter>
+            <thingDefs>
+              <li>TEKSteel</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>ComponentIndustrial</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>SubcoreBasic</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+      </ingredients>
+      <products>
+        <Mech_TekChef>1</Mech_TekChef>
+      </products>
+      <descriptionHyperlinks>
+        <ThingDef>Mech_TekChef</ThingDef>
+      </descriptionHyperlinks>
+    </RecipeDef>
+  	  </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <order>Prepend</order>
+    <value>
+        <li>Mech_TekChef</li>
+    </value>
+  </Operation>
+
+  <!-- Heavy Mech Ressurection Recipe Patches -->
+
+  	<Operation Class="PatchOperationInsert">
+  		<xpath>Defs/RecipeDef[defName="ResurrectLightMech"]/fixedIngredientFilter/thingDefs/li</xpath>
+  		<value>
+  			<li>Corpse_Mech_TekChef</li>
+  		</value>
+  	</Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs</xpath>
+      <value>
+      <RecipeDef ParentName="HeavyMechanoidRecipe">
+        <defName>Mech_TekGuard</defName>
+        <label>gestate Tek Guard Mech</label>
+        <description>Gestate a Tek Guard mech.</description>
+        <gestationCycles>1</gestationCycles>
+        <researchPrerequisite>BasicMechtech</researchPrerequisite>
+        <ingredients Inherit="False">
+          <li>
+            <filter>
+              <thingDefs>
+                <li>TEKSteel</li>
+              </thingDefs>
+            </filter>
+            <count>3</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>ComponentIndustrial</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>SubcoreBasic</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+        </ingredients>
+        <products>
+          <Mech_TekGuard>1</Mech_TekGuard>
+        </products>
+        <descriptionHyperlinks>
+          <ThingDef>Mech_TekGuard</ThingDef>
+        </descriptionHyperlinks>
+      </RecipeDef>
+    	  </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+      <order>Prepend</order>
+      <value>
+          <li>Mech_TekGuard</li>
+      </value>
+    </Operation>
+
+    <!-- Heavy Mech Ressurection Recipe Patches -->
+
+    	<Operation Class="PatchOperationInsert">
+    		<xpath>Defs/RecipeDef[defName="ResurrectLightMech"]/fixedIngredientFilter/thingDefs/li</xpath>
+    		<value>
+    			<li>Corpse_Mech_TekGuard</li>
+    		</value>
+    	</Operation>
+
+
+
+            <Operation Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+              <value>
+              <RecipeDef ParentName="HeavyMechanoidRecipe">
+                <defName>Mech_TekMilitor</defName>
+                <label>gestate Tek Militor Mech</label>
+                <description>Gestate a Tek Militor mech.</description>
+                <gestationCycles>1</gestationCycles>
+                <researchPrerequisite>BasicMechtech</researchPrerequisite>
+                <ingredients Inherit="False">
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>TEKSteel</li>
+                      </thingDefs>
+                    </filter>
+                    <count>3</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>ComponentIndustrial</li>
+                      </thingDefs>
+                    </filter>
+                    <count>1</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>SubcoreBasic</li>
+                      </thingDefs>
+                    </filter>
+                    <count>1</count>
+                  </li>
+                </ingredients>
+                <products>
+                  <Mech_TekMilitor>1</Mech_TekMilitor>
+                </products>
+                <descriptionHyperlinks>
+                  <ThingDef>Mech_TekMilitor</ThingDef>
+                </descriptionHyperlinks>
+              </RecipeDef>
+            	  </value>
+            </Operation>
+
+            <Operation Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+              <order>Prepend</order>
+              <value>
+                  <li>Mech_TekMilitor</li>
+              </value>
+            </Operation>
+
+            <!-- Heavy Mech Ressurection Recipe Patches -->
+
+            	<Operation Class="PatchOperationInsert">
+            		<xpath>Defs/RecipeDef[defName="ResurrectLightMech"]/fixedIngredientFilter/thingDefs/li</xpath>
+            		<value>
+            			<li>Corpse_Mech_TekMilitor</li>
+            		</value>
+            	</Operation>
+
+
 </Patch>

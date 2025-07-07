@@ -523,7 +523,7 @@
       </li>
 
 	  <li Class="CompProperties_TurretGun">
-        <turretDef>Mini_TekRed</turretDef>
+        <turretDef>Quadraxis_Turret</turretDef>
         <angleOffset>-90</angleOffset>
      </li>
 
@@ -566,7 +566,39 @@
     </verbs>
   </ThingDef>
 
-
+  <ThingDef ParentName="BaseWeaponTurret">
+      <defName>Quadraxis_Turret</defName>
+      <label>Quad turret</label>
+      <description>Thorax Mounted Tek Gun</description>
+      <tradeability>None</tradeability>
+      <destroyOnDrop>true</destroyOnDrop>
+      <graphicData>
+        <texPath>Things/Weapons/ChargeGun</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+      <statBases>
+        <Mass>10</Mass>
+        <AccuracyTouch>1</AccuracyTouch>
+        <AccuracyShort>1</AccuracyShort>
+        <AccuracyMedium>1</AccuracyMedium>
+        <AccuracyLong>1</AccuracyLong>
+      </statBases>
+      <verbs>
+        <li>
+  	    <verbClass>Verb_Shoot</verbClass>
+  		<defaultProjectile>Laser_TekBlasterRed</defaultProjectile>
+          <range>30</range>
+  		<minRange>0</minRange>
+          <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+          <burstShotCount>3</burstShotCount>
+          <soundCast>Tek_Blaster</soundCast>
+          <muzzleFlashScale>9</muzzleFlashScale>
+  		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
+  		<defaultCooldownTime>12</defaultCooldownTime>
+        </li>
+      </verbs>
+    </ThingDef>
 
 
 <ThingDef ParentName="BaseWeaponTurret">

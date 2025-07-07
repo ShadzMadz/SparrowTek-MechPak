@@ -506,12 +506,12 @@
                       </li>
                       <li>
                         <def>SightSensor</def>
-                        <customLabel>left sight sensor cluster</customLabel>
+                        <customLabel>left camera</customLabel>
                         <coverage>0.10</coverage>
                       </li>
                       <li>
                         <def>SightSensor</def>
-                        <customLabel>right sight sensor cluster</customLabel>
+                        <customLabel>right camera</customLabel>
                         <coverage>0.10</coverage>
                       </li>
                       <li>

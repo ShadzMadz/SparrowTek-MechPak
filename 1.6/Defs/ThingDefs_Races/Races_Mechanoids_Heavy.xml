@@ -420,22 +420,28 @@
         <capacities>
           <li>Cut</li>
           <li>Stab</li>
+          <li>Flame</li>
         </capacities>
-        <power>27</power>
+        <power>31</power>
         <cooldownTime>1.2</cooldownTime>
         <linkedBodyPartsGroup>RightFrontLeg</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.75</chanceFactor>
       </li>
       <li>
         <label>Front Left Leg Blade</label>
         <capacities>
           <li>Cut</li>
           <li>Stab</li>
+          <li>Flame</li>
         </capacities>
-        <power>27</power>
+        <power>31</power>
         <cooldownTime>1.2</cooldownTime>
         <linkedBodyPartsGroup>LeftFrontLeg</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.75</chanceFactor>
       </li>
 	   <li>
         <label>Rear Right Leg Blade</label>
@@ -474,7 +480,7 @@
     <race>
       <body>Mech_TekQuadraxis</body>
       <baseHealthScale>4.5</baseHealthScale>
-	  <baseBodySize>3.4</baseBodySize>
+	  <baseBodySize>4.5</baseBodySize>
       <soundMeleeHitPawn>STEK_Quadraxis_slash_pawnhit</soundMeleeHitPawn>
       <soundMeleeHitBuilding>STEK_Quadraxis_slash_buildinghit</soundMeleeHitBuilding>
       <soundMeleeMiss>STEK_Quadraxis_slash_miss</soundMeleeMiss>
@@ -497,24 +503,24 @@
       </lifeStageAges>
     </race>
     <statBases>
-	  <MoveSpeed>1.3</MoveSpeed>
+	  <MoveSpeed>1.4</MoveSpeed>
       <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
 	  <BandwidthCost>4</BandwidthCost>
-	  <IncomingDamageFactor>0.85</IncomingDamageFactor>
+	  <IncomingDamageFactor>0.75</IncomingDamageFactor>
 	  <MarketValue>5500</MarketValue>
 	  <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
-      <EnergyShieldEnergyMax>6.0</EnergyShieldEnergyMax>
+      <EnergyShieldEnergyMax>7.0</EnergyShieldEnergyMax>
 	  <StaggerDurationFactor>0.4</StaggerDurationFactor>
     </statBases>
 	<comps>
       <li Class="CompProperties_ProjectileInterceptor">
-        <radius>1.8</radius>
+        <radius>2</radius>
         <interceptGroundProjectiles>true</interceptGroundProjectiles>
         <color>(1, 0, 0)</color>
         <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
         <activeSound>STEK_Sheild_Ambience</activeSound>
-        <hitPoints>600</hitPoints>
+        <hitPoints>700</hitPoints>
         <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
         <chargeDurationTicks>4800</chargeDurationTicks><!-- 20s -->
         <drawWithNoSelection>True</drawWithNoSelection>
@@ -523,7 +529,7 @@
       </li>
 
 	  <li Class="CompProperties_TurretGun">
-        <turretDef>Mini_TekRed</turretDef>
+        <turretDef>Quadraxis_Turret</turretDef>
         <angleOffset>-90</angleOffset>
      </li>
 
@@ -566,7 +572,41 @@
     </verbs>
   </ThingDef>
 
-
+  <ThingDef ParentName="BaseWeaponTurret">
+      <defName>Quadraxis_Turret</defName>
+      <label>Quad turret</label>
+      <description>Thorax Mounted Tek Gun</description>
+      <tradeability>None</tradeability>
+      <destroyOnDrop>true</destroyOnDrop>
+      <graphicData>
+        <texPath>Things/Weapons/ChargeGun</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+      <statBases>
+        <Mass>10</Mass>
+        <AccuracyTouch>1</AccuracyTouch>
+        <AccuracyShort>1</AccuracyShort>
+        <AccuracyMedium>1</AccuracyMedium>
+        <AccuracyLong>1</AccuracyLong>
+      </statBases>
+      <weaponTags>
+        <li>MechanoidGunMiniFlameblaster</li>
+      </weaponTags>
+      <verbs>
+        <li>
+  	    <verbClass>Verb_SpewFire</verbClass>
+          <range>6</range>
+  		<minRange>0</minRange>
+          <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+          <burstShotCount>27</burstShotCount>
+          <soundCast>Shot_MiniFlameblaster</soundCast>
+          <muzzleFlashScale>9</muzzleFlashScale>
+  		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
+  		<defaultCooldownTime>9</defaultCooldownTime>
+        </li>
+      </verbs>
+    </ThingDef>
 
 
 <ThingDef ParentName="BaseWeaponTurret">
@@ -798,7 +838,7 @@
     <label>Tek Quadraxis</label>
     <race>Mech_TekQuadraxis</race>
 	<allowInMechClusters>false</allowInMechClusters>
-    <combatPower>225</combatPower>
+    <combatPower>425</combatPower>
     <lifeStages>
       <li MayRequire="Ludeon.Rimworld.Biotech">
         <bodyGraphicData>

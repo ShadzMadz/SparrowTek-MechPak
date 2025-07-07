@@ -14,8 +14,8 @@
       <description>A small mobile sheild generator mechanoid, developed by Sparrow Tek Industries, the Buckler was made to be cheap, effective and easy to feild, they make perfect escorts and work very well with Tek Sentry mechs.</description>
       <statBases>
         <MoveSpeed>6</MoveSpeed>
-      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.44</ArmorRating_Sharp>
       <BandwidthCost>1</BandwidthCost>
 	  <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
       <EnergyShieldEnergyMax>1.0</EnergyShieldEnergyMax>
@@ -42,7 +42,7 @@
 
       <race>
 	        <baseBodySize>0.5</baseBodySize>
-      <baseHealthScale>2.4</baseHealthScale>
+      <baseHealthScale>2.8</baseHealthScale>
         <lifeStageAges>
           <li>
             <def>MechanoidFullyFormed</def>
@@ -126,8 +126,8 @@
       <description>A small combat mechanoid, developed by Sparrow Tek Industries, this mechanoid has very weak combat abilities, but they are extremely cheap and easy to build, they make perfect escorts and work very well with Tek Buckler mechs.</description>
       <statBases>
         <MoveSpeed>6</MoveSpeed>
-      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <BandwidthCost>1</BandwidthCost>
 	  <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
       <EnergyShieldEnergyMax>1.0</EnergyShieldEnergyMax>
@@ -144,7 +144,7 @@
     </comps>
       <race>
 	        <baseBodySize>0.5</baseBodySize>
-      <baseHealthScale>2.4</baseHealthScale>
+      <baseHealthScale>2.8</baseHealthScale>
         <lifeStageAges>
           <li>
             <def>MechanoidFullyFormed</def>
@@ -206,6 +206,300 @@
 
 
 
+    <!-- guard -->
+        <ThingDef ParentName="LightMechanoid">
+          <defName>Mech_TekGuard</defName>
+          <label>Tek Guard</label>
+          <description>A small combat mechanoid, developed by Sparrow Tek Industries, this mechanoid has very weak combat abilities, but they are extremely cheap and easy to build, Tek Guards are often used by smaller factions that have needs for a body guard, while they are not quite as strong as scythers they do in a pinch and can quickly overwhelm enemies in groups, Tek Guards are technically melee versions of Tek Sentries.</description>
+          <statBases>
+            <MoveSpeed>6</MoveSpeed>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+          <BandwidthCost>1</BandwidthCost>
+    	  <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
+          <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+    	  <MechEnergyUsageFactor>1</MechEnergyUsageFactor>
+    	  <MarketValue>900</MarketValue>
+          </statBases>
+    	  <comps>
+
+    	  <li Class="CompProperties_Shield" />
+
+        </comps>
+        <tools>
+          <li>
+            <label>Tek Blade</label>
+            <capacities>
+              <li>Cut</li>
+              <li>Stab</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>1.5</cooldownTime>
+            <linkedBodyPartsGroup>GuardBlade</linkedBodyPartsGroup>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            <chanceFactor>0.75</chanceFactor>
+          </li>
+          <li>
+            <label>MechanicalHead</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          </li>
+        </tools>
+          <race>
+    	        <baseBodySize>0.5</baseBodySize>
+          <baseHealthScale>2.8</baseHealthScale>
+            <lifeStageAges>
+              <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>0</minAge>
+                <soundWounded>SmallSTEKDamaged</soundWounded>
+                <soundDeath>STEKSmallDeath</soundDeath>
+                <soundCall>STEKsmallAmbience</soundCall>
+              </li>
+              <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>100</minAge>
+                <soundWounded>SmallSTEKDamaged</soundWounded>
+                <soundDeath>STEKSmallDeath</soundDeath>
+                <soundCall>STEKsmallAmbience</soundCall>
+              </li>
+            </lifeStageAges>
+          </race>
+        </ThingDef>
+
+        <PawnKindDef ParentName="LightMechanoidKind">
+          <defName>Mech_TekGuard</defName>
+          <label>Tek Guard</label>
+          <race>Mech_TekGuard</race>
+          <allowInMechClusters>false</allowInMechClusters>
+          <combatPower>45</combatPower>
+          <lifeStages>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/Guard</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Guard</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                  <volume>(0.3, 0.4, 0.3)</volume>
+                  <offset>(0,0,-0.25)</offset>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+            <li>
+              <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/Guard</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Guard</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                  <volume>(0.3, 0.4, 0.3)</volume>
+                  <offset>(0,0,-0.25)</offset>
+                </shadowData>
+              </bodyGraphicData>
+            </li>
+          </lifeStages>
+        </PawnKindDef>
+
+
+
+        <!-- Chef -->
+            <ThingDef ParentName="LightMechanoid">
+              <defName>Mech_TekChef</defName>
+              <label>Tek Chef</label>
+              <description>A small combat mechanoid, developed by Sparrow Tek Industries, while this Mech has no combat abilities at all, it is capable of cooking and providing food for small groups.</description>
+              <statBases>
+                <MoveSpeed>6</MoveSpeed>
+              <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+              <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+              <BandwidthCost>1</BandwidthCost>
+            <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
+              <EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>
+            <MechEnergyUsageFactor>1</MechEnergyUsageFactor>
+            <MarketValue>900</MarketValue>
+              </statBases>
+              <race>
+                  <baseBodySize>0.5</baseBodySize>
+              <baseHealthScale>2.4</baseHealthScale>
+                <lifeStageAges>
+                  <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>SmallSTEKDamaged</soundWounded>
+                    <soundDeath>STEKSmallDeath</soundDeath>
+                    <soundCall>STEKsmallAmbience</soundCall>
+                  </li>
+                  <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>100</minAge>
+                    <soundWounded>SmallSTEKDamaged</soundWounded>
+                    <soundDeath>STEKSmallDeath</soundDeath>
+                    <soundCall>STEKsmallAmbience</soundCall>
+                  </li>
+                </lifeStageAges>
+                <mechEnabledWorkTypes>
+                  <li>Cooking</li>
+                </mechEnabledWorkTypes>
+              </race>
+
+            </ThingDef>
+
+            <PawnKindDef ParentName="LightMechanoidKind">
+              <defName>Mech_TekChef</defName>
+              <label>Tek Chef</label>
+              <race>Mech_TekChef</race>
+              <allowInMechClusters>false</allowInMechClusters>
+              <combatPower>45</combatPower>
+              <lifeStages>
+                <li>
+                  <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/Chef</texPath>
+                    <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Chef</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                      <volume>(0.3, 0.4, 0.3)</volume>
+                      <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                  </bodyGraphicData>
+                </li>
+                <li>
+                  <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/Chef</texPath>
+                    <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Chef</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                      <volume>(0.3, 0.4, 0.3)</volume>
+                      <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                  </bodyGraphicData>
+                </li>
+              </lifeStages>
+            </PawnKindDef>
+
+
+            <!-- Tek Militor -->
+            <ThingDef ParentName="LightMechanoid">
+              <defName>Mech_TekMilitor</defName>
+              <label>Tek militor</label>
+              <description> a Small combat mechanoid, very much like regular militors, Tek militors are just slightly better militors. They are slightly more difficult to produce the regular militors however. They come with a better battery unit so they don't need to recharge as often.</description>
+              <statBases>
+                <MoveSpeed>3.9</MoveSpeed>
+                <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+                <baseHealthScale>1.1</baseHealthScale>
+                <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                <baseBodySize>0.8</baseBodySize>
+                <BandwidthCost>1</BandwidthCost>
+              <EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
+                <EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>
+              <MechEnergyUsageFactor>0.5</MechEnergyUsageFactor>
+              </statBases>
+              <comps>
+                <li Class="CompProperties_ProjectileInterceptor">
+                  <radius>0.50</radius>
+                  <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                  <color>(1, 1, 1)</color>
+                  <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+                  <activeSound>STEK_Sheild_Ambience</activeSound>
+                  <hitPoints>40</hitPoints>
+                  <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+                  <chargeDurationTicks>3000</chargeDurationTicks><!-- 10s -->
+                  <drawWithNoSelection>True</drawWithNoSelection>
+                  <disarmedByEmpForTicks>7000</disarmedByEmpForTicks>
+                  <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+                </li>
+              </comps>
+              <tools>
+                <li>
+                  <label>Tek Blade</label>
+                  <capacities>
+                    <li>Cut</li>
+                    <li>Stab</li>
+                  </capacities>
+                  <power>9</power>
+                  <cooldownTime>1.5</cooldownTime>
+                  <linkedBodyPartsGroup>GuardBlade</linkedBodyPartsGroup>
+                  <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                  <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                  <chanceFactor>0.75</chanceFactor>
+                </li>
+                <li>
+                  <label>MechanicalHead</label>
+                  <capacities>
+                    <li>Cut</li>
+                  </capacities>
+                  <power>4</power>
+                  <cooldownTime>2</cooldownTime>
+                  <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                </li>
+              </tools>
+              <race>
+                  <lifeStageAges>
+                    <li>
+                      <def>MechanoidFullyFormed</def>
+                      <minAge>0</minAge>
+                      <soundWounded>SmallSTEKDamaged</soundWounded>
+                      <soundDeath>STEKSmallDeath</soundDeath>
+                      <soundCall>STEKsmallAmbience</soundCall>
+                    </li>
+                    <li>
+                      <def>MechanoidFullyFormed</def>
+                      <minAge>100</minAge>
+                      <soundWounded>SmallSTEKDamaged</soundWounded>
+                      <soundDeath>STEKSmallDeath</soundDeath>
+                      <soundCall>STEKsmallAmbience</soundCall>
+                    </li>
+                </lifeStageAges>
+              </race>
+            </ThingDef>
+            <PawnKindDef ParentName="LightMechanoidKind">
+              <defName>Mech_TekMilitor</defName>
+              <label>Tek militor</label>
+              <race>Mech_TekMilitor</race>
+              <combatPower>50</combatPower>
+              <lifeStages>
+                <li>
+                  <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/TekMilitor</texPath>
+                    <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                      <volume>(0.3, 0.4, 0.3)</volume>
+                      <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                  </bodyGraphicData>
+                </li>
+                <li>
+                  <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/TekMilitor</texPath>
+                    <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                      <volume>(0.3, 0.4, 0.3)</volume>
+                      <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                  </bodyGraphicData>
+                </li>
+              </lifeStages>
+              <weaponTags>
+                <li>Tek_MilitorEquip</li>
+              </weaponTags>
+            </PawnKindDef>
 
 
 </Defs>

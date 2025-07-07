@@ -24,12 +24,12 @@
 
   <comps>
     <li Class="CompProperties_ProjectileInterceptor">
-      <radius>0.85</radius>
+      <radius>1</radius>
       <interceptGroundProjectiles>true</interceptGroundProjectiles>
       <color>(0, 0, 1)</color>
       <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
       <activeSound>STEK_Sheild_Ambience</activeSound>
-      <hitPoints>125</hitPoints>
+      <hitPoints>175</hitPoints>
       <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
       <chargeDurationTicks>5400</chargeDurationTicks>
       <drawWithNoSelection>True</drawWithNoSelection>
@@ -44,45 +44,48 @@
 
   <tools>
     <li>
-      <label>MechanicalHead</label>
-      <capacities>
-        <li>Blunt</li>
-      </capacities>
-      <power>17</power>
-      <cooldownTime>1.8</cooldownTime>
-      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-    </li>
-    <li>
       <label>Right Tek Blade</label>
       <capacities>
         <li>Cut</li>
         <li>Stab</li>
-        <li>Stun</li>
+        <li>EMP</li>
       </capacities>
-      <power>9</power>
-      <cooldownTime>1.8</cooldownTime>
+      <power>20</power>
+      <cooldownTime>2</cooldownTime>
       <linkedBodyPartsGroup>RightTekScytherBlade</linkedBodyPartsGroup>
       <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      <chanceFactor>0.5</chanceFactor>
     </li>
     <li>
       <label>Left Tek Blade</label>
       <capacities>
         <li>Cut</li>
         <li>Stab</li>
-        <li>Burn</li>
+        <li>EMP</li>
       </capacities>
-      <power>9</power>
-      <cooldownTime>1.8</cooldownTime>
+      <power>20</power>
+      <cooldownTime>2</cooldownTime>
       <linkedBodyPartsGroup>LeftTekScytherBlade</linkedBodyPartsGroup>
       <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      <chanceFactor>0.5</chanceFactor>
+    </li>
+    <li>
+      <label>MechanicalHead</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
     </li>
   </tools>
 
   <race>
     <body>Mech_TekScyther_Blue</body>
-    <baseBodySize>1.2</baseBodySize>
-    <baseHealthScale>2</baseHealthScale>
+    <baseBodySize>1.65</baseBodySize>
+    <baseHealthScale>1.35</baseHealthScale>
     <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
     <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
     <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
@@ -106,7 +109,7 @@
     <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
     <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
     <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
-    <mechWeightClass>Heavy</mechWeightClass>
+    <mechWeightClass>Medium</mechWeightClass>
   </race>
 
   <butcherProducts>
@@ -139,11 +142,11 @@
   <lifeStages>
     <li MayRequire="Ludeon.RimWorld.Biotech">
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
+        <texPath>Things/Pawn/Mechanoid/TekScytherB</texPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekScytherB</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1</drawSize>
+        <drawSize>1.75</drawSize>
         <shadowData>
           <volume>(0.4, 0.8, 0.4)</volume>
         </shadowData>
@@ -151,11 +154,11 @@
     </li>
     <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
+        <texPath>Things/Pawn/Mechanoid/TekScytherB</texPath>
+        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekScytherB</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1</drawSize>
+        <drawSize>1.75</drawSize>
         <shadowData>
           <volume>(0.4, 0.8, 0.4)</volume>
         </shadowData>
