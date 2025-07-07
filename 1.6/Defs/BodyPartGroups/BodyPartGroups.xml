@@ -206,4 +206,6 @@
     <alive>true</alive>
     <skinCovered>false</skinCovered>
     <solid>true</solid>
-    <bleedRate>0</bleedR
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+</Defs>

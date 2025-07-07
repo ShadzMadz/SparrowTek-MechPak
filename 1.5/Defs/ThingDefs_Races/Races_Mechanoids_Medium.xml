@@ -85,7 +85,7 @@
   <race>
     <body>Mech_TekScyther_Blue</body>
     <baseBodySize>1.65</baseBodySize>
-    <baseHealthScale>1.35</baseHealthScale>
+    <baseHealthScale>1.54</baseHealthScale>
     <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
     <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
     <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
@@ -187,7 +187,7 @@
    </targetParams>
  </verbProperties>
  <comps>
-   <li Class="Mech_TekLancer_White.CompProperties_Invisibility">
+   <li Class="Mech_Invisibility.CompProperties_Invisibility">
      <durationTicksRange>900~1800</durationTicksRange>
  <hediff>Mech_TekScyther_Invisibility</hediff>
    </li>

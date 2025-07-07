@@ -481,19 +481,16 @@
             <coverage>0.30</coverage>
             <customLabel>Mechanical Torso</customLabel>
             <height>Middle</height>
-            <armorRating>0.80</armorRating>
             <depth>Outside</depth>
             <parts>
               <li>
                 <def>MechanicalNeck</def>
                 <coverage>0.10</coverage>
-                <armorRating>0.4</armorRating>
                 <customLabel>Reinforced Head Mount</customLabel>
                 <height>Top</height>
                 <parts>
                   <li>
                     <def>MechanicalHead</def>
-                    <armorRating>0.50</armorRating>
                     <coverage>0.50</coverage>
                     <groups>
                       <li>HeadAttackTool</li>

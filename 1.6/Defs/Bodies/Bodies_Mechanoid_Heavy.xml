@@ -14,7 +14,6 @@
     <def>MechanicalHead</def>
     <coverage>0.20</coverage>
     <height>Top</height>
-    <armorRating>0.75</armorRating>
     <depth>Outside</depth>
     <parts>
 
@@ -68,7 +67,6 @@
       <!-- Primary Armor Rings and Internals -->
       <li>
         <def>MechanicalCentipedeBodyFirstRing</def>
-        <armorRating>0.55</armorRating>
         <coverage>0.15</coverage>
         <depth>Outside</depth>
         <parts>
@@ -76,7 +74,7 @@
             <def>MechanicalThorax</def>
             <customLabel>CarbonPlating</customLabel>
             <coverage>0.20</coverage>
-            <depth>Middle</depth>
+            <depth>Undefined</depth>
           </li>
         </parts>
       </li>
@@ -112,7 +110,6 @@
       </li>
       <li>
         <def>MechanicalCentipedeBodyFourthRing</def>
-        <armorRating>0.30</armorRating>
         <coverage>0.15</coverage>
         <depth>Outside</depth>
         <parts>
@@ -189,7 +186,6 @@
 
   <corePart>
     <def>MechanicalCentipedeBodyFirstRing</def>
-    <armorRating>0.4</armorRating>
     <height>Middle</height>
     <depth>Outside</depth>
     <coverage>0.20</coverage>
@@ -209,7 +205,6 @@
         <def>MechanicalHead</def>
         <coverage>0.2</coverage>
         <height>Top</height>
-        <armorRating>0.75</armorRating>
         <depth>Outside</depth>
         <groups>
           <li>HeadAttackTool</li>
@@ -243,7 +238,7 @@
         <def>MechanicalThorax</def>
         <customLabel>CorePlating</customLabel>
         <coverage>0.1</coverage>
-        <depth>Middle</depth>
+        <depth>Undefined</depth>
       </li>
 
       <!-- 4) Second Ring with main Reactor -->
@@ -302,7 +297,7 @@
             <def>MechanicalThorax</def>
             <customLabel>AuxCryoPlating</customLabel>
             <coverage>0.1</coverage>
-            <depth>Middle</depth>
+            <depth>Undefined</depth>
           </li>
         </parts>
       </li>
