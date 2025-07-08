@@ -11,13 +11,22 @@
     <recipeUsers>
       <li>FabricationBench</li>
     </recipeUsers>
-    <costList>
-    <Plasteel>5</Plasteel>
-    <Steel>15</Steel>
-    </costList>
-    <products>
-      <TEKSteel>3</TEKSteel>
-    </products>
+    <ingredients>
+  <li>
+    <thingDef>Plasteel</thingDef>
+    <count>5</count>
+  </li>
+  <li>
+    <thingDef>Steel</thingDef>
+    <count>15</count>
+  </li>
+</ingredients>
+<products>
+  <li>
+    <thingDef>TEKSteel</thingDef>
+    <count>3</count>
+  </li>
+</products>
     <skillRequirements>
       <Crafting>11</Crafting>
     </skillRequirements>

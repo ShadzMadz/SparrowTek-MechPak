@@ -28,10 +28,6 @@
     <tradeTags>
       <li>Exotic</li>
     </tradeTags>
-
-    <comps>
-      <li Class="CompProperties_Tradeable" />
-    </comps>
     <constructEffect>ConstructMetal</constructEffect>
     <isAirtight>true</isAirtight>
     <stuffProps>

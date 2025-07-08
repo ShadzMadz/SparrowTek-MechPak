@@ -11,13 +11,21 @@
   <recipeUsers>
     <li>TableMachining</li>
   </recipeUsers>
-<costList>
-<Plasteel>5</Plasteel>
-<Steel>25</Steel>
-</costList>
-<recipeMaker>
+  <ingredients>
+    <li>
+      <thingDef>Plasteel</thingDef>
+      <count>5</count>
+    </li>
+    <li>
+      <thingDef>Steel</thingDef>
+      <count>25</count>
+    </li>
+  </ingredients>
   <products>
-    <TEKSteel>1</TEKSteel>
+    <li>
+      <thingDef>TEKSteel</thingDef>
+      <count>1</count> <!-- or 1 for Machining -->
+    </li>
   </products>
   <skillRequirements>
     <Crafting>5</Crafting>
