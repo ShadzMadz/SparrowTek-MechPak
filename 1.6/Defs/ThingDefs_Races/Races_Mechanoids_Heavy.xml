@@ -185,21 +185,24 @@
         <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
       </li>
 
-	  <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
-			<maxPawnCapacity>3</maxPawnCapacity>
-			<captureCommand>
-				<label>Capture pawn</label>
-				<description>Capture and store a pawn in an inner crypto storage.</description>
-				<texPath>Things/UI/CryoCapture</texPath>
-			</captureCommand>
-			<releaseCommand>
-				<label>Release {0}</label>
-				<description>Release {0} from the inner crypto storage.</description>
-				<texPath>Things/UI/CryoDrop</texPath>
-			</releaseCommand>
-			<captureJob>CVN_CapturePawn</captureJob>
-			<releaseJob>CVN_ReleasePawn</releaseJob>
-		</li>
+      <!--
+      <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
+          <maxPawnCapacity>3</maxPawnCapacity>
+          <captureCommand>
+              <label>Capture pawn</label>
+              <description>Capture and store a pawn in an inner crypto storage.</description>
+              <texPath>Things/UI/CryoCapture</texPath>
+          </captureCommand>
+          <releaseCommand>
+              <label>Release {0}</label>
+              <description>Release {0} from the inner crypto storage.</description>
+              <texPath>Things/UI/CryoDrop</texPath>
+          </releaseCommand>
+          <captureJob>CVN_CapturePawn</captureJob>
+          <releaseJob>CVN_ReleasePawn</releaseJob>
+      </li>
+      -->
+
 
 	  <li Class="CompProperties_TurretGun">
         <turretDef>Mini_TekBlueCannon</turretDef>
@@ -335,21 +338,24 @@
       <BandwidthCost>2</BandwidthCost>
     </statBases>
 	<comps>
-		<li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
-			<maxPawnCapacity>5</maxPawnCapacity>
-			<captureCommand>
-				<label>Capture pawn</label>
-				<description>Capture and store a pawn in the CryptoBioBubble.</description>
-				<texPath>Things/UI/CryoCapture</texPath>
-			</captureCommand>
-			<releaseCommand>
-				<label>Release {0}</label>
-				<description>Release {0} from the inner crypto CryptoBioBubble.</description>
-				<texPath>Things/UI/CryoDrop</texPath>
-			</releaseCommand>
-			<captureJob>CVN_CapturePawn</captureJob>
-			<releaseJob>CVN_ReleasePawn</releaseJob>
-		</li>
+    <!--
+    <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
+        <maxPawnCapacity>3</maxPawnCapacity>
+        <captureCommand>
+            <label>Capture pawn</label>
+            <description>Capture and store a pawn in an inner crypto storage.</description>
+            <texPath>Things/UI/CryoCapture</texPath>
+        </captureCommand>
+        <releaseCommand>
+            <label>Release {0}</label>
+            <description>Release {0} from the inner crypto storage.</description>
+            <texPath>Things/UI/CryoDrop</texPath>
+        </releaseCommand>
+        <captureJob>CVN_CapturePawn</captureJob>
+        <releaseJob>CVN_ReleasePawn</releaseJob>
+    </li>
+    -->
+
 	</comps>
   </ThingDef>
 
@@ -1648,29 +1654,16 @@
 
   <tools>
     <li>
-      <label>shield</label>
-      <capacities><li>Blunt</li></capacities>
-      <power>12.0</power>
-      <cooldownTime>4</cooldownTime>
-      <linkedBodyPartsGroup>CoveredByShield</linkedBodyPartsGroup>
-      <surpriseAttack>
-        <extraMeleeDamages>
-          <li><def>Stun</def><amount>14</amount></li>
-        </extraMeleeDamages>
-      </surpriseAttack>
-      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-    </li>
-    <li>
-      <label>gunBarrel</label>
-      <capacities><li>Poke</li></capacities>
-      <power>8.5</power>
-      <cooldownTime>2</cooldownTime>
-      <linkedBodyPartsGroup>gunBarrel</linkedBodyPartsGroup>
+      <label>MechanicalHead</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>17</power>
+      <cooldownTime>2.6</cooldownTime>
+      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      <chanceFactor>0.2</chanceFactor>
     </li>
   </tools>
-
   <race>
     <body>Mech_TekDefender</body>
     <baseBodySize>0.5</baseBodySize>

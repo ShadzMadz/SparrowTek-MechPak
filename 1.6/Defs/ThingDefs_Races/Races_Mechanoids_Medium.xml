@@ -2,7 +2,6 @@
 <Defs>
 
   <!-- ThingDef for Tek Scyther Mechanoid -->
-  <!-- ============================= Defender ================================= -->
 
   <ThingDef ParentName="BaseMechanoidWalker">
   <defName>Mech_TekScyther_Blue</defName>
@@ -36,10 +35,10 @@
       <disarmedByEmpForTicks>7400</disarmedByEmpForTicks>
       <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
     </li>
-    <li Class="Mech_Invisibility.CompProperties_Invisibility">
+    <!--<li Class="Mech_Invisibility.CompProperties_Invisibility">
       <durationTicksRange>900~1800</durationTicksRange>
   <hediff>Mech_TekLancer_Invisibility</hediff>
-    </li>
+</li>-->
   </comps>
 
   <tools>
@@ -169,47 +168,50 @@
 </PawnKindDef>
 
 
+<!--
 <AbilityDef>
- <defName>Mech_TekScyther_Invisibility</defName>
- <label>Active cloak</label>
- <description>tex.todo</description>
- <iconPath>UI/Abilities/MechSmokepop</iconPath>
- <targetRequired>false</targetRequired>
- <hostile>false</hostile>
- <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
- <verbProperties>
-   <verbClass>Verb_CastAbility</verbClass>
-   <warmupTime>1</warmupTime>
-   <drawAimPie>false</drawAimPie>
- <range>-1</range>
-   <targetParams>
-     <canTargetSelf>true</canTargetSelf>
-   </targetParams>
- </verbProperties>
- <comps>
-   <li Class="Mech_Invisibility.CompProperties_Invisibility">
-     <durationTicksRange>900~1800</durationTicksRange>
- <hediff>Mech_TekScyther_Invisibility</hediff>
-   </li>
- </comps>
+  <defName>Mech_TekScyther_Invisibility</defName>
+  <label>Active cloak</label>
+  <description>tex.todo</description>
+  <iconPath>UI/Abilities/MechSmokepop</iconPath>
+  <targetRequired>false</targetRequired>
+  <hostile>false</hostile>
+  <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <warmupTime>1</warmupTime>
+    <drawAimPie>false</drawAimPie>
+    <range>-1</range>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <comps>
+    <li Class="Mech_Invisibility.CompProperties_Invisibility">
+      <durationTicksRange>900~1800</durationTicksRange>
+      <hediff>Mech_TekScyther_Invisibility</hediff>
+    </li>
+  </comps>
 </AbilityDef>
 
 <HediffDef>
- <defName>Mech_TekScyther_Invisibility</defName>
- <label>invisibility</label>
- <hediffClass>HediffWithComps</hediffClass>
- <description>text.todo.</description>
- <isBad>false</isBad>
- <comps>
-   <li Class="HediffCompProperties_Invisibility">
-     <visibleToPlayer>true</visibleToPlayer>
-   </li>
-   <li Class="HediffCompProperties_Disappears">
-     <showRemainingTime>True</showRemainingTime>
-   </li>
-   <li Class="HediffCompProperties_DisappearsOnDeath"/>
- </comps>
+  <defName>Mech_TekScyther_Invisibility</defName>
+  <label>invisibility</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>text.todo.</description>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Invisibility">
+      <visibleToPlayer>true</visibleToPlayer>
+    </li>
+    <li Class="HediffCompProperties_Disappears">
+      <showRemainingTime>True</showRemainingTime>
+    </li>
+    <li Class="HediffCompProperties_DisappearsOnDeath"/>
+  </comps>
 </HediffDef>
+-->
+
 
 
 

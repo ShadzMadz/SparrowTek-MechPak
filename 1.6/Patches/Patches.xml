@@ -8,6 +8,7 @@
   <value>
   <RecipeDef ParentName="HeavyMechanoidRecipe">
     <defName>Mech_TekCentipedeBlaster</defName>
+    <uiIconPath>Things/Pawn/Icon/TekCentipedeBlaster</uiIconPath>
     <label>gestate Tek Centipede Blaster</label>
     <description>Gestate a Sparrow Tek Centipede Blaster mechanoid.</description>
     <gestationCycles>6</gestationCycles>
@@ -282,6 +283,7 @@
   <RecipeDef ParentName="HeavyMechanoidRecipe">
     <defName>Mech_TekQuadraxis</defName>
     <label>gestate Tek Quadraxis Mech</label>
+    <uiIconPath>Things/Pawn/Icon/TekQuadraxis</uiIconPath>
     <description>Gestate a Tek Quadraxis mech.</description>
     <gestationCycles>6</gestationCycles>
     <researchPrerequisite>HighMechtech</researchPrerequisite>
