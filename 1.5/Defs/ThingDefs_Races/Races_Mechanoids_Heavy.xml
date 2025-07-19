@@ -86,7 +86,7 @@
       </li>
     </tools>
   </ThingDef>
-
+  
   <PawnKindDef ParentName="MechCentipedeBase">
     <defName>Mech_TekCentipedeBlaster</defName>
     <label>TekCentipedeBlaster</label>
@@ -123,10 +123,10 @@
       <li>TekRed</li>
     </weaponTags>
     <techHediffsChance>1</techHediffsChance>
-    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <techHediffsMoney>9999~9999</techHediffsMoney>      
     <abilities>
     </abilities>
-    <controlGroupPortraitZoom>0.5</controlGroupPortraitZoom>
+    <controlGroupPortraitZoom>0.5</controlGroupPortraitZoom>  
   </PawnKindDef>
 
 
@@ -155,9 +155,9 @@
       \n\n The Guardian also comes with three crypto caskets onboard, allowing it to pick up and store injured units, putting a complete stop to medical emergencies on the battlefield. This gives fireteams the time they need to rescue their own without the cost of more lives, making this mechanoid extremely useful for caravans or very grueling military operations.
      \n\n&lt;color=#0026FF&gt; This mechanoid is part of the TEK blue series.&lt;/color&gt;</description>
     <statBases>
-      <MoveSpeed>2.2</MoveSpeed>
-      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
-      <ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+      <MoveSpeed>2.4</MoveSpeed>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <BandwidthCost>8</BandwidthCost>
       <CaravanRidingSpeedFactor>3.2</CaravanRidingSpeedFactor>
 	  <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
@@ -177,14 +177,14 @@
         <color>(0, 0, 1)</color>
         <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
         <activeSound>STEK_Sheild_Ambience</activeSound>
-        <hitPoints>875</hitPoints>
+        <hitPoints>675</hitPoints>
         <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
         <chargeDurationTicks>1800</chargeDurationTicks><!-- 10s -->
         <drawWithNoSelection>True</drawWithNoSelection>
         <disarmedByEmpForTicks>5400</disarmedByEmpForTicks>
         <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
       </li>
-
+	  
 	  <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
 			<maxPawnCapacity>3</maxPawnCapacity>
 			<captureCommand>
@@ -200,7 +200,7 @@
 			<captureJob>CVN_CapturePawn</captureJob>
 			<releaseJob>CVN_ReleasePawn</releaseJob>
 		</li>
-
+	  
 	  <li Class="CompProperties_TurretGun">
         <turretDef>Mini_TekBlueCannon</turretDef>
         <angleOffset>-90</angleOffset>
@@ -210,7 +210,7 @@
     <race>
       <body>Mech_TekCentipedeGuardian</body>
       <baseBodySize>6</baseBodySize>
-      <baseHealthScale>6</baseHealthScale>
+      <baseHealthScale>5.8</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>TekCentipedeMechanoidFullyFormed</def>
@@ -285,10 +285,10 @@
   <li>TekGuardian</li>
     </weaponTags>
     <techHediffsChance>1</techHediffsChance>
-    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <techHediffsMoney>9999~9999</techHediffsMoney>      
     <abilities>
     </abilities>
-    <controlGroupPortraitZoom>0.5</controlGroupPortraitZoom>
+    <controlGroupPortraitZoom>0.5</controlGroupPortraitZoom>  
   </PawnKindDef>
 
 
@@ -420,28 +420,22 @@
         <capacities>
           <li>Cut</li>
           <li>Stab</li>
-          <li>Flame</li>
         </capacities>
-        <power>31</power>
+        <power>27</power>
         <cooldownTime>1.2</cooldownTime>
         <linkedBodyPartsGroup>RightFrontLeg</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.75</chanceFactor>
       </li>
       <li>
         <label>Front Left Leg Blade</label>
         <capacities>
           <li>Cut</li>
           <li>Stab</li>
-          <li>Flame</li>
         </capacities>
-        <power>31</power>
+        <power>27</power>
         <cooldownTime>1.2</cooldownTime>
         <linkedBodyPartsGroup>LeftFrontLeg</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.75</chanceFactor>
       </li>
 	   <li>
         <label>Rear Right Leg Blade</label>
@@ -480,7 +474,7 @@
     <race>
       <body>Mech_TekQuadraxis</body>
       <baseHealthScale>4.5</baseHealthScale>
-	  <baseBodySize>4.5</baseBodySize>
+	  <baseBodySize>3.4</baseBodySize>
       <soundMeleeHitPawn>STEK_Quadraxis_slash_pawnhit</soundMeleeHitPawn>
       <soundMeleeHitBuilding>STEK_Quadraxis_slash_buildinghit</soundMeleeHitBuilding>
       <soundMeleeMiss>STEK_Quadraxis_slash_miss</soundMeleeMiss>
@@ -503,38 +497,38 @@
       </lifeStageAges>
     </race>
     <statBases>
-	  <MoveSpeed>1.4</MoveSpeed>
+	  <MoveSpeed>1.3</MoveSpeed>
       <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
 	  <BandwidthCost>4</BandwidthCost>
-	  <IncomingDamageFactor>0.75</IncomingDamageFactor>
+	  <IncomingDamageFactor>0.85</IncomingDamageFactor>
 	  <MarketValue>5500</MarketValue>
 	  <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
-      <EnergyShieldEnergyMax>7.0</EnergyShieldEnergyMax>
+      <EnergyShieldEnergyMax>6.0</EnergyShieldEnergyMax>
 	  <StaggerDurationFactor>0.4</StaggerDurationFactor>
     </statBases>
 	<comps>
       <li Class="CompProperties_ProjectileInterceptor">
-        <radius>2</radius>
+        <radius>1.8</radius>
         <interceptGroundProjectiles>true</interceptGroundProjectiles>
         <color>(1, 0, 0)</color>
         <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
         <activeSound>STEK_Sheild_Ambience</activeSound>
-        <hitPoints>700</hitPoints>
+        <hitPoints>600</hitPoints>
         <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
         <chargeDurationTicks>4800</chargeDurationTicks><!-- 20s -->
         <drawWithNoSelection>True</drawWithNoSelection>
         <disarmedByEmpForTicks>7200</disarmedByEmpForTicks>
         <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
       </li>
-
+	  
 	  <li Class="CompProperties_TurretGun">
-        <turretDef>Quadraxis_Turret</turretDef>
+        <turretDef>Mini_TekRed</turretDef>
         <angleOffset>-90</angleOffset>
      </li>
-
-	  <li Class="CompProperties_Shield" />
-
+	  
+	  <li Class="CompProperties_Shield" /> 
+	  
     </comps>
   </ThingDef>
 
@@ -561,52 +555,18 @@
 		<defaultProjectile>Laser_TekBlasterRed</defaultProjectile>
         <range>30</range>
 		<minRange>0</minRange>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <burstShotCount>1</burstShotCount>
         <soundCast>Tek_Blaster</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
 		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<defaultCooldownTime>9</defaultCooldownTime>
+		<defaultCooldownTime>15</defaultCooldownTime>
       </li>
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="BaseWeaponTurret">
-      <defName>Quadraxis_Turret</defName>
-      <label>Quad turret</label>
-      <description>Thorax Mounted Tek Gun</description>
-      <tradeability>None</tradeability>
-      <destroyOnDrop>true</destroyOnDrop>
-      <graphicData>
-        <texPath>Things/Weapons/ChargeGun</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-        <Mass>10</Mass>
-        <AccuracyTouch>1</AccuracyTouch>
-        <AccuracyShort>1</AccuracyShort>
-        <AccuracyMedium>1</AccuracyMedium>
-        <AccuracyLong>1</AccuracyLong>
-      </statBases>
-      <weaponTags>
-        <li>MechanoidGunMiniFlameblaster</li>
-      </weaponTags>
-      <verbs>
-        <li>
-  	    <verbClass>Verb_SpewFire</verbClass>
-          <range>6</range>
-  		<minRange>0</minRange>
-          <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-          <burstShotCount>27</burstShotCount>
-          <soundCast>Shot_MiniFlameblaster</soundCast>
-          <muzzleFlashScale>9</muzzleFlashScale>
-  		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
-          <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-  		<defaultCooldownTime>9</defaultCooldownTime>
-        </li>
-      </verbs>
-    </ThingDef>
+
 
 
 <ThingDef ParentName="BaseWeaponTurret">
@@ -707,7 +667,7 @@
       <li>
 	    <verbClass>Verb_Shoot</verbClass>
 		<defaultProjectile>Bullet_EMPTEKLauncher</defaultProjectile>
-        <range>39</range>
+        <range>30</range>
 		<minRange>0</minRange>
         <ticksBetweenBurstShots>45</ticksBetweenBurstShots>
         <forcedMissRadius>1</forcedMissRadius>
@@ -716,7 +676,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
 		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<defaultCooldownTime>9</defaultCooldownTime>
+		<defaultCooldownTime>15</defaultCooldownTime>
       </li>
     </verbs>
   </ThingDef>
@@ -786,7 +746,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
 		<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<defaultCooldownTime>14</defaultCooldownTime>
+		<defaultCooldownTime>9</defaultCooldownTime>
       </li>
     </verbs>
   </ThingDef>
@@ -838,7 +798,7 @@
     <label>Tek Quadraxis</label>
     <race>Mech_TekQuadraxis</race>
 	<allowInMechClusters>false</allowInMechClusters>
-    <combatPower>425</combatPower>
+    <combatPower>225</combatPower>
     <lifeStages>
       <li MayRequire="Ludeon.Rimworld.Biotech">
         <bodyGraphicData>
@@ -1081,14 +1041,14 @@
         <disarmedByEmpForTicks>7200</disarmedByEmpForTicks>
         <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
       </li>
-
+	  
 	  <li Class="CompProperties_TurretGun">
         <turretDef>Mini_ToxGunner</turretDef>
         <angleOffset>-90</angleOffset>
      </li>
-
-	  <li Class="CompProperties_Shield" />
-
+	  
+	  <li Class="CompProperties_Shield" /> 
+	  
     </comps>
   </ThingDef>
 
@@ -1223,7 +1183,7 @@
   <ThingDef ParentName="BaseMechanoidWalker">
     <defName>Mech_TekLancer_Red</defName>
     <label>Tek Lancer Red</label>
-    <description>A new mechanoid manufactured by Sparrow Tek Industries, The red Tek lancer is an upgraded lancer, it has slightly heavier armor plating and a personal sheild, it can withstand a decent amount of damage before going down. Its still somewhat fagile like most lancers, it also has a chance to spawn with fire based weapons. A special feature that comes with red lancers is the shoulder grenade launcher which fires tek firebombs as a secondary weapon. \n\n&lt;color=#FF0000&gt; This mechanoid is part of the TEK red series.&lt;/color&gt;
+    <description>A new mechanoid manufactured by Sparrow Tek Industries, The red Tek lancer is an upgraded lancer, it has slightly heavier armor plating and a personal sheild, it can withstand a decent amount of damage before going down. Its still somewhat fagile like most lancers, it also has a chance to spawn with fire based weapons. A special feature that comes with red lancers is the shoulder grenade launcher which fires tek firebombs as a secondary weapon. \n\n&lt;color=#FF0000&gt; This mechanoid is part of the TEK red series.&lt;/color&gt; 
       \n\n&lt;color=#FF0000&gt; Please be careful when using this lancer as it will fire these tek bombs at will, even indoors, the launcher can be disabled when selected.&lt;/color&gt;</description>
     <race>
       <body>Mech_TekLancer_Red</body>
@@ -1455,7 +1415,7 @@
     <defName>Mech_TekLancer_Blue</defName>
     <label>Tek Lancer Blue</label>
     <description>A new mechanoid manufactured by Sparrow Tek Industries, The blue Tek lancer is an upgraded lancer, it has much heavier armor plating and a personal sheild, allowing it to take alot of hits before going down, Its still somewhat fagile like most lancers, it also has a chance to spawn with EMP based weapons. A special feature that comes with blue lancers is the jump pack that allows it to close the gap.
-      \n\n&lt;color=#0026FF&gt; This mechanoid is part of the TEK blue series.&lt;/color&gt;
+      \n\n&lt;color=#0026FF&gt; This mechanoid is part of the TEK blue series.&lt;/color&gt; 
     </description>
     <race>
       <body>Mech_TekLancer_Blue</body>
@@ -1610,152 +1570,10 @@
 
 
 
-  <!-- ============================= Defender ================================= -->
-
-  <ThingDef ParentName="BaseMechanoidWalker">
-  <defName>Mech_TekDefender</defName>
-  <label>Tek Defender</label>
-  <description>
-    The Tek Defender is a mechanoid manufactured by SparrowTek Industries. Defenders are hardy, small but heavy mechanoids designed to hold the line with their bulletproof front shields. They're fast and heavy but not very accurate or deadly — their sloppy but high rate of fire is designed to ward off riots and large mobs. They make for an excellent police force.
-  </description>
-
-
-  <statBases>
-    <MoveSpeed>5</MoveSpeed>
-    <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-    <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
-    <BandwidthCost>2</BandwidthCost>
-    <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
-    <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
-    <IncomingDamageFactor>0.95</IncomingDamageFactor>
-  </statBases>
-
-  <comps>
-    <li Class="CompProperties_ProjectileInterceptor">
-      <radius>0.85</radius>
-      <interceptGroundProjectiles>true</interceptGroundProjectiles>
-      <color>(0, 0, 1)</color>
-      <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-      <activeSound>STEK_Sheild_Ambience</activeSound>
-      <hitPoints>325</hitPoints>
-      <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-      <chargeDurationTicks>10800</chargeDurationTicks>
-      <drawWithNoSelection>True</drawWithNoSelection>
-      <disarmedByEmpForTicks>5400</disarmedByEmpForTicks>
-      <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-    </li>
-  </comps>
-
-  <tools>
-    <li>
-      <label>shield</label>
-      <capacities><li>Blunt</li></capacities>
-      <power>12.0</power>
-      <cooldownTime>4</cooldownTime>
-      <linkedBodyPartsGroup>CoveredByShield</linkedBodyPartsGroup>
-      <surpriseAttack>
-        <extraMeleeDamages>
-          <li><def>Stun</def><amount>14</amount></li>
-        </extraMeleeDamages>
-      </surpriseAttack>
-      <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-    </li>
-    <li>
-      <label>gunBarrel</label>
-      <capacities><li>Poke</li></capacities>
-      <power>8.5</power>
-      <cooldownTime>2</cooldownTime>
-      <linkedBodyPartsGroup>gunBarrel</linkedBodyPartsGroup>
-      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      <chanceFactor>0.2</chanceFactor>
-    </li>
-  </tools>
-
-  <race>
-    <body>Mech_TekDefender</body>
-    <baseBodySize>0.5</baseBodySize>
-    <baseHealthScale>3.0</baseHealthScale>
-    <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
-    <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
-    <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
-    <lifeStageAges Inherit="False">
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-        <soundWounded>SmallSTEKDamaged</soundWounded>
-        <soundDeath>STEKSmallDeath</soundDeath>
-        <soundCall>STEKsmallAmbience</soundCall>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-        <soundWounded>SmallSTEKDamaged</soundWounded>
-        <soundDeath>STEKSmallDeath</soundDeath>
-        <soundCall>STEKsmallAmbience</soundCall>
-      </li>
-    </lifeStageAges>
-    <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
-    <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-    <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-    <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
-    <mechWeightClass>Heavy</mechWeightClass>
-  </race>
-
-  <butcherProducts>
-    <TEKSteel>25</TEKSteel>
-    <Plasteel>25</Plasteel>
-  </butcherProducts>
-</ThingDef>
 
 
 
 
-<PawnKindDef ParentName="BaseMechanoidKind">
-  <defName>Mech_TekDefender</defName>
-  <label>Tek Defender</label>
-  <race>Mech_TekDefender</race>
-  <combatPower>240</combatPower>
-
-  <!-- No weapons should be generated -->
-  <abilities>
-  <li>SmokepopMech</li>
-  </abilities>
-  <weaponMoney>
-    <min>9999</min>
-    <max>9999</max>
-  </weaponMoney>
-  <weaponTags>
-    <li>TekBlueDefender</li>
-  </weaponTags>
-
-  <lifeStages>
-    <li MayRequire="Ludeon.RimWorld.Biotech">
-      <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1</drawSize>
-        <shadowData>
-          <volume>(0.4, 0.8, 0.4)</volume>
-        </shadowData>
-      </bodyGraphicData>
-    </li>
-    <li>
-      <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/TekDefender</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/TekDefender</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1</drawSize>
-        <shadowData>
-          <volume>(0.4, 0.8, 0.4)</volume>
-        </shadowData>
-      </bodyGraphicData>
-    </li>
-  </lifeStages>
-
-</PawnKindDef>
 
 
 </Defs>

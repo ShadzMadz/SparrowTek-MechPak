@@ -1,2 +1,5 @@
 
-work on descriptions more, fix them to be a little better they're hard to read.
+New DLC ruined C# for some mechs:
+
+Mech invisibility completely broke.
+Mech Mobile Crypto casket ability for mechs also broke.

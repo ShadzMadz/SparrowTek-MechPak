@@ -1,169 +1,150 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-
-
-<!-- Tek Centipede Blaster -->
-<BodyDef>
-  <defName>Mech_TekCentipedeBlaster</defName>
-  <label>Sparrow Tek Centipede</label>
-
-  <corePart>
-    <!-- Root set to MechanicalHead for front-first hit resolution -->
-    <def>MechanicalHead</def>
-    <coverage>0.20</coverage>
-    <height>Top</height>
-    <depth>Outside</depth>
-    <parts>
-
-      <!-- Head Internals -->
-      <li>
-        <def>SightSensor</def>
-        <customLabel>Main sight sensor</customLabel>
-        <coverage>0.01</coverage>
-      </li>
-      <li>
-        <def>SightSensor</def>
-        <customLabel>Left sight sensor</customLabel>
-        <coverage>0.01</coverage>
-      </li>
-      <li>
-        <def>SightSensor</def>
-        <customLabel>Far Left sight sensor</customLabel>
-        <coverage>0.01</coverage>
-      </li>
-      <li>
-        <def>SightSensor</def>
-        <customLabel>Right sight sensor</customLabel>
-        <coverage>0.01</coverage>
-      </li>
-      <li>
-        <def>SightSensor</def>
-        <customLabel>Far Right sight sensor</customLabel>
-        <coverage>0.01</coverage>
-      </li>
-      <li>
-        <def>HearingSensor</def>
-        <customLabel>Left hearing sensor</customLabel>
-        <coverage>0.02</coverage>
-      </li>
-      <li>
-        <def>HearingSensor</def>
-        <customLabel>Right hearing sensor</customLabel>
-        <coverage>0.02</coverage>
-      </li>
-      <li>
-        <def>ArtificialBrain</def>
-        <customLabel>Main Processor Cortex</customLabel>
-        <coverage>0.06</coverage>
-        <depth>Inside</depth>
-      </li>
-      <li>
-        <def>SmellSensor</def>
-        <coverage>0.02</coverage>
-      </li>
-
-      <!-- Primary Armor Rings and Internals -->
-      <li>
-        <def>MechanicalCentipedeBodyFirstRing</def>
-        <coverage>0.15</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>MechanicalThorax</def>
-            <customLabel>CarbonPlating</customLabel>
-            <coverage>0.20</coverage>
-            <depth>Undefined</depth>
-          </li>
-        </parts>
-      </li>
-      <li>
-        <def>MechanicalCentipedeBodySecondRing</def>
-        <coverage>0.15</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>Reactor</def>
-            <customLabel>Main Reactor</customLabel>
-            <coverage>0.05</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-      <li>
-        <def>MechanicalCentipedeBodyThirdRing</def>
-        <coverage>0.15</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>FluidReprocessor</def>
-            <coverage>0.05</coverage>
-            <depth>Inside</depth>
-          </li>
-          <li>
-            <def>FluidReprocessor</def>
-            <coverage>0.05</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-      <li>
-        <def>MechanicalCentipedeBodyFourthRing</def>
-        <coverage>0.15</coverage>
-        <depth>Outside</depth>
-        <parts>
+  
+  <!-- Tek Centipede Blaster -->
+  <BodyDef>
+    <defName>Mech_TekCentipedeBlaster</defName>
+    <label>Sparrow Tek Centipede</label>
+   <corePart>
+      <def>MechanicalCentipedeBodyFirstRing</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+	  <li>
+	   <def>MechanicalThorax</def>
+	   <customLabel>CarbonPlating</customLabel>
+      <height>Middle</height>
+	  <coverage>0.12</coverage>
+      <depth>Outside</depth>
+	  </li>
+        <li>
+          <def>MechanicalHead</def>
+          <coverage>0.15</coverage>
+          <height>Top</height>
+          <groups>
+            <li>HeadAttackTool</li>
+          </groups>
+          <parts>
             <li>
               <def>ArtificialBrain</def>
-              <customLabel>Operating System Drive</customLabel>
+			  <customLabel>Processor core 1</customLabel>
+              <coverage>0.02</coverage>
+              <depth>Inside</depth>
+            </li>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>left sight sensor</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+			<li>
+              <def>SightSensor</def>
+              <customLabel>left-most sight sensor</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>right sight sensor</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+			<li>
+              <def>SightSensor</def>
+              <customLabel>right-most sight sensor</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+			<li>
+              <def>SightSensor</def>
+              <customLabel>center sight sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>left hearing sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>right hearing sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>SmellSensor</def>
+              <coverage>0.08</coverage>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalCentipedeBodySecondRing</def>
+          <coverage>0.71</coverage>
+          <parts>
+            <li>
+              <def>Reactor</def>
+			   <customLabel>reactor 1</customLabel>
               <coverage>0.05</coverage>
               <depth>Inside</depth>
             </li>
+            <li>
+              <def>MechanicalCentipedeBodyThirdRing</def>
+              <coverage>0.8</coverage>
+              <parts>
+                <li>
+                  <def>FluidReprocessor</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>MechanicalCentipedeBodyFourthRing</def>
+                  <coverage>0.75</coverage>
+                  <parts>
+                    <li>
+                      <def>FluidReprocessor</def>
+                      <coverage>0.06</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                    <li>
+                      <def>MechanicalCentipedeBodyFifthRing</def>
+                      <coverage>0.66</coverage>
+                      <parts>
+						<li>
+						<def>FluidReprocessor</def>
+						<customLabel>Cortex Fluid Filter</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>
+						<li>
+						<def>Reactor</def>
+						<customLabel>Cortex Reactor</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>
+						<li>
+						<def>ArtificialBrain</def>
+						<customLabel>Processor cortex</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>
+                        <li>
+                          <def>MechanicalCentipedeBodySixthRing</def>
+                          <coverage>0.12</coverage>
+						<parts>
+						 <li>
+                          <def>MechanicalCentipedeBodySeventhRing</def>
+                          <coverage>0.08</coverage>
+						  </li>
+						</parts>
+						</li>
+                      </parts>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
           </parts>
-      </li>
-
-      <!-- Redundant Systems -->
-      <li>
-        <def>MechanicalCentipedeBodyFifthRing</def>
-        <coverage>0.10</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>Reactor</def>
-            <customLabel>Cortex AUX Reactor</customLabel>
-            <coverage>0.02</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-      <li>
-        <def>MechanicalCentipedeBodySixthRing</def>
-        <coverage>0.05</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>FluidReprocessor</def>
-            <customLabel>Cortex Fluid Filter</customLabel>
-            <coverage>0.02</coverage>
-            <depth>Inside</depth>
-          </li>
-          <li>
-            <def>ArtificialBrain</def>
-            <customLabel>Processor AUX Cortex</customLabel>
-            <coverage>0.02</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-      <li>
-        <def>MechanicalCentipedeBodySeventhRing</def>
-        <coverage>0.05</coverage>
-        <depth>Outside</depth>
-      </li>
-
-    </parts>
-  </corePart>
-</BodyDef>
+        </li>
+		
+      </parts>
+    </corePart>
+  </BodyDef>
 
 
 
@@ -180,638 +161,579 @@
 
 
 <!-- Tek Centipede Guardian -->
-<BodyDef>
-  <defName>Mech_TekCentipedeGuardian</defName>
-  <label>Sparrow Tek Centipede Guardian</label>
-
-  <corePart>
-    <def>MechanicalCentipedeBodyFirstRing</def>
-    <height>Middle</height>
-    <depth>Outside</depth>
-    <coverage>0.20</coverage>
-    <parts>
-
-      <!-- 1) Shield Plate (Front-most) -->
-      <li>
-        <def>HexShieldPlate</def>
-        <customLabel>Face Shield</customLabel>
-        <coverage>0.05</coverage>
-        <depth>Outside</depth>
-      </li>
-
-      <!-- 2) Head -->
-      <!-- Head -->
-      <li>
-        <def>MechanicalHead</def>
-        <coverage>0.2</coverage>
-        <height>Top</height>
-        <depth>Outside</depth>
-        <groups>
-          <li>HeadAttackTool</li>
-        </groups>
-        <parts>
-          <li>
-            <def>SightSensor</def>
-            <customLabel>Main sight sensor</customLabel>
-            <coverage>0.04</coverage>
-          </li>
-          <li>
-            <def>HearingSensor</def>
-            <customLabel>left hearing sensor</customLabel>
-            <coverage>0.04</coverage>
-          </li>
-          <li>
-            <def>HearingSensor</def>
-            <customLabel>right hearing sensor</customLabel>
-            <coverage>0.04</coverage>
-          </li>
-          <li>
-            <def>SmellSensor</def>
-            <coverage>0.03</coverage>
-          </li>
-        </parts>
-      </li>
-
-
-      <!-- 3) Thorax (Primary) inside 1st Ring -->
-      <li>
-        <def>MechanicalThorax</def>
-        <customLabel>CorePlating</customLabel>
-        <coverage>0.1</coverage>
-        <depth>Undefined</depth>
-      </li>
-
-      <!-- 4) Second Ring with main Reactor -->
-      <li>
-        <def>MechanicalCentipedeBodySecondRing</def>
-        <coverage>0.2</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>Reactor</def>
-            <customLabel>Main Reactor</customLabel>
-            <coverage>0.04</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-
-      <!-- 5) Third Ring with Fluid Reprocessors -->
-      <li>
-        <def>MechanicalCentipedeBodyThirdRing</def>
-        <coverage>0.2</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>FluidReprocessor</def>
-            <coverage>0.03</coverage>
-            <depth>Inside</depth>
-          </li>
-          <li>
-            <def>FluidReprocessor</def>
-            <coverage>0.03</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-
-      <!-- 6) Fourth Ring with Bulb Turret and Second Thorax -->
-      <li>
-        <def>MechanicalCentipedeBodyFourthRing</def>
-        <coverage>0.2</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <!-- EMP Turret -->
-          <li>
-            <def>BulbTurret</def>
-            <customLabel>EMP Cannon Turret</customLabel>
-            <coverage>0.05</coverage>
-            <height>Top</height>
-            <depth>Outside</depth>
-            <groups>
-              <li>Turret</li>
-            </groups>
-          </li>
-          <!-- Backup Thorax -->
-          <li>
-            <def>MechanicalThorax</def>
-            <customLabel>AuxCryoPlating</customLabel>
-            <coverage>0.1</coverage>
-            <depth>Undefined</depth>
-          </li>
-        </parts>
-      </li>
-
-      <!-- 7) Fifth Ring with backup Reactor -->
-      <li>
-        <def>MechanicalCentipedeBodyFifthRing</def>
-        <coverage>0.07</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>Reactor</def>
-            <customLabel>Backup Reactor</customLabel>
-            <coverage>0.02</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-
-      <!-- 8) Sixth Ring with backup brain + fluid -->
-      <li>
-        <def>MechanicalCentipedeBodySixthRing</def>
-        <coverage>0.05</coverage>
-        <depth>Outside</depth>
-        <parts>
-          <li>
-            <def>ArtificialBrain</def>
-            <customLabel>Backup Cortex</customLabel>
-            <coverage>0.025</coverage>
-            <depth>Inside</depth>
-          </li>
-          <li>
-            <def>FluidReprocessor</def>
-            <customLabel>Backup Filter</customLabel>
-            <coverage>0.02</coverage>
-            <depth>Inside</depth>
-          </li>
-        </parts>
-      </li>
-
-      <!-- 9) Seventh Ring (Tail, no internals) -->
-      <li>
-        <def>MechanicalCentipedeBodySeventhRing</def>
-        <coverage>0.05</coverage>
-        <depth>Outside</depth>
-      </li>
-
-    </parts>
-  </corePart>
-</BodyDef>
-
-
-
-
-
-
-<!-- Tek Quadraxis Spider‑Mech Body Definition -->
-<BodyDef>
-<defName>Mech_TekQuadraxis</defName>
-<label>Quadraxis</label>
-<corePart>
-  <def>MechanicalThoraxCanManipulate</def>
-  <customLabel>Arachnoid Body</customLabel>
-  <height>Middle</height>
-  <depth>Outside</depth>
-  <coverage>0.30</coverage>
-  <parts>
-
-    <!-- 1) Head & Sensors -->
-    <li>
-      <def>MechanicalHead</def>
-      <coverage>0.25</coverage>
-      <height>Top</height>
-      <depth>Outside</depth>
-      <groups>
-        <li>HeadAttackTool</li>
-      </groups>
-      <parts>
-        <li>
-          <def>ArtificialBrain</def>
-          <customLabel>Central Processor</customLabel>
-          <coverage>0.05</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>SightSensor</def>
-          <customLabel>Left Eye</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>SightSensor</def>
-          <customLabel>Right Eye</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>HearingSensor</def>
-          <customLabel>Left Auditory Array</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>HearingSensor</def>
-          <customLabel>Right Auditory Array</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>SmellSensor</def>
-          <customLabel>Olfactory Probe</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-      </parts>
-    </li>
-
-    <!-- 2) Four Blade‑Legs -->
-    <!-- Front Right Leg -->
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Front Right Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
+  <BodyDef>
+    <defName>Mech_TekCentipedeGuardian</defName>
+    <label>Sparrow Tek Centipede Guardian</label>
+   <corePart>
+      <def>MechanicalCentipedeBodyFirstRing</def>
+      <height>Middle</height>
       <depth>Outside</depth>
       <parts>
+	  <li>
+	  <def>HexShieldPlate</def>
+	  <height>Middle</height>
+	  <coverage>0.22</coverage>
+	  <depth>Outside</depth>
+	  </li>
+	  <li>
+	   <def>MechanicalThorax</def>
+	   <customLabel>OnBoardCryoCaskets</customLabel>
+      <height>Middle</height>
+	  <coverage>0.02</coverage>
+      <depth>Inside</depth>
+	  </li>
+	  <li>
+          <def>BulbTurret</def>
+          <customLabel>bulb turret</customLabel>
+          <coverage>0.01</coverage>
+          <groups>
+            <li>BulbTurret</li>
+          </groups>
+        </li>
+		<li>
+          <def>BulbTurret</def>
+          <customLabel>bulb Launcher</customLabel>
+          <coverage>0.01</coverage>
+          <groups>
+            <li>BulbLauncher</li>
+          </groups>
+        </li>
         <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Front Right Foot</customLabel>
-          <coverage>0.10</coverage>
+          <def>MechanicalHead</def>
+          <coverage>0.01</coverage>
+          <height>Top</height>
+          <groups>
+            <li>HeadAttackTool</li>
+          </groups>
           <parts>
             <li>
-              <def>Blade</def>
-              <customLabel>Front Right Blade</customLabel>
-              <coverage>0.20</coverage>
-              <groups>
-                <li>RightFrontLeg</li>
-              </groups>
+              <def>ArtificialBrain</def>
+			  <customLabel>Processor core 1</customLabel>
+              <coverage>0.02</coverage>
+              <depth>Inside</depth>
+            </li>
+			<li>
+              <def>SightSensor</def>
+              <customLabel>center sight sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>left hearing sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>right hearing sensor</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>SmellSensor</def>
+              <coverage>0.08</coverage>
             </li>
           </parts>
         </li>
-      </parts>
-    </li>
-
-    <!-- Front Left Leg -->
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Front Left Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <depth>Outside</depth>
-      <parts>
         <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Front Left Foot</customLabel>
-          <coverage>0.10</coverage>
+          <def>MechanicalCentipedeBodySecondRing</def>
+          <coverage>0.71</coverage>
           <parts>
             <li>
-              <def>Blade</def>
-              <customLabel>Front Left Blade</customLabel>
-              <coverage>0.20</coverage>
-              <groups>
-                <li>LeftFrontLeg</li>
-              </groups>
+              <def>Reactor</def>
+			   <customLabel>reactor 1</customLabel>
+              <coverage>0.05</coverage>
+              <depth>Inside</depth>
+            </li>
+            <li>
+              <def>MechanicalCentipedeBodyThirdRing</def>
+              <coverage>0.8</coverage>
+              <parts>
+                <li>
+                  <def>FluidReprocessor</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>MechanicalCentipedeBodyFourthRing</def>
+                  <coverage>0.75</coverage>
+                  <parts>
+                    <li>
+                      <def>FluidReprocessor</def>
+                      <coverage>0.06</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                    <li>
+                      <def>MechanicalCentipedeBodyFifthRing</def>
+                      <coverage>0.66</coverage>
+                      <parts>
+						<li>
+						<def>FluidReprocessor</def>
+						<customLabel>Cortex Fluid Filter</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>
+						<li>
+						<def>Reactor</def>
+						<customLabel>Cortex Reactor</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>
+						<li>
+						<def>ArtificialBrain</def>
+						<customLabel>Processor cortex</customLabel>
+						<coverage>0.01</coverage>
+						<depth>Inside</depth>
+						</li>						
+                        <li>
+                          <def>MechanicalCentipedeBodySixthRing</def>
+                          <coverage>0.2</coverage>
+                        </li>
+                      </parts>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
             </li>
           </parts>
         </li>
+		
       </parts>
-    </li>
+    </corePart>
+  </BodyDef>
 
-    <!-- Rear Right Leg -->
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Rear Right Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
+
+
+
+  <BodyDef>
+    <defName>Mech_TekQuadraxis</defName>
+    <label>Quadraxis</label>
+    <corePart>
+      <def>MechanicalThoraxCanManipulate</def>
+	  <customLabel>Arachnoid Body</customLabel>
+      <height>Middle</height>
       <depth>Outside</depth>
       <parts>
         <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Rear Right Foot</customLabel>
+          <def>MechanicalNeck</def>
           <coverage>0.10</coverage>
+          <height>Top</height>
           <parts>
             <li>
-              <def>Blade</def>
-              <customLabel>Rear Right Blade</customLabel>
-              <coverage>0.20</coverage>
+              <def>MechanicalHead</def>
+              <coverage>0.10</coverage>
               <groups>
-                <li>RightRearLeg</li>
+                <li>HeadAttackTool</li>
               </groups>
+              <parts>
+			         <li>
+				<def>Reactor</def>
+				<coverage>0.03</coverage>
+				<depth>Inside</depth>
+				</li>
+				<li>
+				<def>FluidReprocessor</def>
+				<coverage>0.03</coverage>
+				<depth>Inside</depth>
+				</li>
+                <li>
+                  <def>ArtificialBrain</def>
+                  <coverage>0.10</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>left sight sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>right sight sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>left hearing sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>right hearing sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>SmellSensor</def>
+                  <coverage>0.10</coverage>
+                </li>
+              </parts>
             </li>
           </parts>
         </li>
-      </parts>
-    </li>
-
-    <!-- Rear Left Leg -->
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Rear Left Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <depth>Outside</depth>
-      <parts>
         <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Rear Left Foot</customLabel>
-          <coverage>0.10</coverage>
+          <def>MechanicalLeg</def>
+          <customLabel>front right leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
           <parts>
             <li>
-              <def>Blade</def>
-              <customLabel>Rear Left Blade</customLabel>
-              <coverage>0.20</coverage>
-              <groups>
-                <li>LeftRearLeg</li>
-              </groups>
+              <def>MechanicalFoot</def>
+              <customLabel>Front right foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front right Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>RightFrontLeg</li>
+                  </groups>
+                </li>
+              </parts>
             </li>
           </parts>
         </li>
-      </parts>
-    </li>
-
-    <!-- 3) EMP Cannon Turret (optional back mount) -->
-    <li>
-      <def>BulbTurret</def>
-      <customLabel>Incineration Gun</customLabel>
-      <coverage>0.05</coverage>
-      <height>Top</height>
-      <depth>Outside</depth>
-      <groups>
-        <li>Turret</li>
-      </groups>
-    </li>
-
-    <!-- 4) Internal Core Systems -->
-    <li>
-      <def>Reactor</def>
-      <customLabel>Primary Reactor</customLabel>
-      <coverage>0.05</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>Reactor</def>
-      <customLabel>Backup Reactor</customLabel>
-      <coverage>0.05</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>FluidReprocessor</def>
-      <customLabel>Primary Processor</customLabel>
-      <coverage>0.05</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>FluidReprocessor</def>
-      <customLabel>Backup Processor</customLabel>
-      <coverage>0.05</coverage>
-      <depth>Inside</depth>
-    </li>
-
-  </parts>
-</corePart>
-</BodyDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<BodyDef>
-<defName>Mech_Quadmin</defName>
-<label>Quadmin</label>
-<corePart>
-  <def>MechanicalThoraxCanManipulate</def>
-  <customLabel>Arachnoid Body</customLabel>
-  <height>Middle</height>
-  <depth>Outside</depth>
-  <coverage>0.30</coverage>
-  <parts>
-
-    <!-- Head Unit with Internal Components -->
-    <li>
-      <def>MechanicalHead</def>
-      <coverage>0.20</coverage>
-      <height>Top</height>
-      <depth>Outside</depth>
-      <groups>
-        <li>HeadAttackTool</li>
-      </groups>
-      <parts>
         <li>
-          <def>ArtificialBrain</def>
-          <customLabel>Central Processor</customLabel>
-          <coverage>0.05</coverage>
-          <depth>Inside</depth>
+          <def>MechanicalLeg</def>
+          <customLabel>front left leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>front left foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>LeftFrontLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>rear left leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>rear left foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>rear left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>LeftRearLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+              <li>
+          <def>MechanicalLeg</def>
+          <customLabel>rear right leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>rear right foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>RightRearLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
         </li>
         <li>
           <def>Reactor</def>
-          <customLabel>Head Reactor</customLabel>
+		  <customLabel>Processor 1</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+		 <li>
+          <def>Reactor</def>
+		  <customLabel>Processor</customLabel>
           <coverage>0.03</coverage>
           <depth>Inside</depth>
         </li>
         <li>
           <def>FluidReprocessor</def>
-          <customLabel>Head Processor</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+		<li>
+          <def>BulbTurret</def>
+          <customLabel>bulb turret</customLabel>
+          <coverage>0.05</coverage>
+          <groups>
+            <li>BulbTurret</li>
+          </groups>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <BodyDef>
+    <defName>Mech_Quadmin</defName>
+    <label>Quadmin</label>
+    <corePart>
+      <def>MechanicalThoraxCanManipulate</def>
+	  <customLabel>Arachnoid Body</customLabel>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>MechanicalNeck</def>
+          <coverage>0.10</coverage>
+          <height>Top</height>
+          <parts>
+            <li>
+              <def>MechanicalHead</def>
+              <coverage>0.10</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+			         <li>
+				<def>Reactor</def>
+				<coverage>0.03</coverage>
+				<depth>Inside</depth>
+				</li>
+				<li>
+				<def>FluidReprocessor</def>
+				<coverage>0.03</coverage>
+				<depth>Inside</depth>
+				</li>
+                <li>
+                  <def>ArtificialBrain</def>
+                  <coverage>0.10</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>left sight sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>right sight sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>left hearing sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>right hearing sensor</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>SmellSensor</def>
+                  <coverage>0.10</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>front right leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>Front right foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front right Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>RightFrontLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>front left leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>front left foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>LeftFrontLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>rear left leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>rear left foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>rear left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>LeftRearLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+              <li>
+          <def>MechanicalLeg</def>
+          <customLabel>rear right leg</customLabel>
+          <coverage>0.15</coverage>
+		  <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>rear right foot</customLabel>
+              <coverage>0.10</coverage>
+              <parts>
+                <li>
+                  <def>Blade</def>
+                  <customLabel>front left Leg Blade</customLabel>
+                  <coverage>0.37</coverage>
+                  <groups>
+                    <li>RightRearLeg</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Reactor</def>
+		  <customLabel>Processor 1</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+		 <li>
+          <def>Reactor</def>
+		  <customLabel>Processor</customLabel>
           <coverage>0.03</coverage>
           <depth>Inside</depth>
         </li>
         <li>
-          <def>SightSensor</def>
-          <customLabel>Left Optical</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>SightSensor</def>
-          <customLabel>Right Optical</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>HearingSensor</def>
-          <customLabel>Left Auditory</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>HearingSensor</def>
-          <customLabel>Right Auditory</customLabel>
-          <coverage>0.05</coverage>
-        </li>
-        <li>
-          <def>SmellSensor</def>
-          <customLabel>Olfactory Sensor</customLabel>
+          <def>FluidReprocessor</def>
           <coverage>0.04</coverage>
+          <depth>Inside</depth>
         </li>
-      </parts>
-    </li>
-
-    <!-- Four Bladed Legs -->
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Front Right Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <parts>
         <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Front Right Foot</customLabel>
-          <coverage>0.10</coverage>
-          <parts>
-            <li>
-              <def>Blade</def>
-              <customLabel>Front Right Blade</customLabel>
-              <coverage>0.18</coverage>
-              <groups>
-                <li>RightFrontLeg</li>
-              </groups>
-            </li>
-          </parts>
+          <def>FluidReprocessor</def>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+		<li>
+          <def>BulbTurret</def>
+          <customLabel>bulb turret</customLabel>
+          <coverage>0.05</coverage>
+          <groups>
+            <li>BulbTurret</li>
+          </groups>
         </li>
       </parts>
-    </li>
+    </corePart>
+  </BodyDef>
 
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Front Left Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <parts>
-        <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Front Left Foot</customLabel>
-          <coverage>0.10</coverage>
-          <parts>
-            <li>
-              <def>Blade</def>
-              <customLabel>Front Left Blade</customLabel>
-              <coverage>0.18</coverage>
-              <groups>
-                <li>LeftFrontLeg</li>
-              </groups>
-            </li>
-          </parts>
-        </li>
-      </parts>
-    </li>
 
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Rear Right Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <parts>
-        <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Rear Right Foot</customLabel>
-          <coverage>0.10</coverage>
-          <parts>
-            <li>
-              <def>Blade</def>
-              <customLabel>Rear Right Blade</customLabel>
-              <coverage>0.18</coverage>
-              <groups>
-                <li>RightRearLeg</li>
-              </groups>
-            </li>
-          </parts>
-        </li>
-      </parts>
-    </li>
 
-    <li>
-      <def>MechanicalLeg</def>
-      <customLabel>Rear Left Leg</customLabel>
-      <coverage>0.15</coverage>
-      <height>Bottom</height>
-      <parts>
-        <li>
-          <def>MechanicalFoot</def>
-          <customLabel>Rear Left Foot</customLabel>
-          <coverage>0.10</coverage>
-          <parts>
-            <li>
-              <def>Blade</def>
-              <customLabel>Rear Left Blade</customLabel>
-              <coverage>0.18</coverage>
-              <groups>
-                <li>LeftRearLeg</li>
-              </groups>
-            </li>
-          </parts>
-        </li>
-      </parts>
-    </li>
-
-    <!-- Bulb Turret -->
-    <li>
-      <def>BulbTurret</def>
-      <customLabel>Toxic Flechette Turret</customLabel>
-      <coverage>0.05</coverage>
-      <height>Top</height>
-      <depth>Outside</depth>
-      <groups>
-        <li>BulbTurret</li>
-      </groups>
-    </li>
-
-    <!-- Internal Systems in Thorax -->
-    <li>
-      <def>Reactor</def>
-      <customLabel>Thorax Reactor 1</customLabel>
-      <coverage>0.04</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>Reactor</def>
-      <customLabel>Thorax Reactor 2</customLabel>
-      <coverage>0.04</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>FluidReprocessor</def>
-      <customLabel>Core Processor 1</customLabel>
-      <coverage>0.04</coverage>
-      <depth>Inside</depth>
-    </li>
-    <li>
-      <def>FluidReprocessor</def>
-      <customLabel>Core Processor 2</customLabel>
-      <coverage>0.04</coverage>
-      <depth>Inside</depth>
-    </li>
-
-  </parts>
-</corePart>
-</BodyDef>
 
 
 

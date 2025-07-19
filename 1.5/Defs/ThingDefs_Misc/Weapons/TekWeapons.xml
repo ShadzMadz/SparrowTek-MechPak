@@ -18,7 +18,7 @@
     <label>Tek Sniper</label>
     <graphicData>
       <texPath>Things/Projectile/Tek_Imperialist</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass> 
 	  <shaderType>TransparentPostLight</shaderType>
 	  <drawSize>2.3</drawSize>
     </graphicData>
@@ -58,7 +58,7 @@
       <AccuracyMedium>0.95</AccuracyMedium>
       <AccuracyLong>1.00</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
-	  <generateCommonality>0.04</generateCommonality>
+	  <generateCommonality>0.01</generateCommonality>
     </statBases>
        <weaponTags>
       <li>SpacerGun</li>
@@ -68,8 +68,9 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <costList>
-      <ComponentSpacer>3</ComponentSpacer>
-	  <TEKSteel>75</TEKSteel>
+      <Plasteel>300</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+	  <Steel>200</Steel>
     </costList>
     <recipeMaker>
       <recipeUsers Inherit="False">
@@ -187,7 +188,7 @@
       <AccuracyMedium>0.80</AccuracyMedium>
       <AccuracyLong>0.30</AccuracyLong>
       <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
-	  <generateCommonality>0.02</generateCommonality>
+	  <generateCommonality>0.01</generateCommonality>
     </statBases>
        <weaponTags>
       <li>SpacerGun</li>
@@ -198,8 +199,9 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <costList>
-      <ComponentSpacer>4</ComponentSpacer>
-	  <TEKSteel>70</TEKSteel>
+      <Plasteel>200</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+	  <Steel>200</Steel>
     <Uranium>145</Uranium>
     <STEK_G10_PulseRifle>1</STEK_G10_PulseRifle>
     </costList>
@@ -304,7 +306,7 @@
       <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.30</AccuracyLong>
       <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
-	  <generateCommonality>0.02</generateCommonality>
+	  <generateCommonality>0.01</generateCommonality>
     </statBases>
        <weaponTags>
       <li>SpacerGun</li>
@@ -315,11 +317,12 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <costList>
-      <ComponentSpacer>2</ComponentSpacer>
-	  <TEKSteel>70</TEKSteel>
+      <Plasteel>175</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <Steel>200</Steel>
     <Uranium>145</Uranium>
     <STEK_G10_PulseRifle>1</STEK_G10_PulseRifle>
-    <Chemfuel>70</Chemfuel>
+    <Chemfuel>120</Chemfuel>
     </costList>
     <recipeMaker>
       <recipeUsers Inherit="False">
@@ -429,7 +432,7 @@
       <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.20</AccuracyLong>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
-	  <generateCommonality>0.05</generateCommonality>
+	  <generateCommonality>0.03</generateCommonality>
     </statBases>
     <equippedStatOffsets>
       <ResearchSpeed>0.45</ResearchSpeed>
@@ -446,9 +449,10 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <costList>
+      <Plasteel>125</Plasteel>
       <ComponentSpacer>1</ComponentSpacer>
-	  <TEKSteel>35</TEKSteel>
-    <Uranium>15</Uranium>
+	  <Steel>200</Steel>
+    <Uranium>55</Uranium>
     <STEK_U00_PulseRifle>1</STEK_U00_PulseRifle>
     </costList>
     <recipeMaker>
@@ -458,7 +462,7 @@
 	</recipeUsers>
       <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
       <skillRequirements>
-        <Crafting>7</Crafting>
+        <Crafting>10</Crafting>
         <Intellectual>7</Intellectual>
       </skillRequirements>
     </recipeMaker>
@@ -562,7 +566,7 @@
       <AccuracyMedium>0.80</AccuracyMedium>
       <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
-	  <generateCommonality>0.04</generateCommonality>
+	  <generateCommonality>0.02</generateCommonality>
 	  <MarketValue>4000</MarketValue>
     </statBases>
        <weaponTags>
@@ -577,8 +581,9 @@
     <li>GunHeavy</li>
     </weaponClasses>
     <costList>
-      <ComponentSpacer>1</ComponentSpacer>
-	  <TEKSteel>50</TEKSteel>
+      <Plasteel>175</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+	  <Steel>200</Steel>
     <Uranium>90</Uranium>
     <Wastepack>60</Wastepack>
     <STEK_U00_PulseRifle>1</STEK_U00_PulseRifle>
@@ -590,7 +595,7 @@
       </recipeUsers>
       <researchPrerequisite>ChargedShot</researchPrerequisite>
       <skillRequirements>
-        <Crafting>7</Crafting>
+        <Crafting>11</Crafting>
         <Intellectual>7</Intellectual>
       </skillRequirements>
     </recipeMaker>
@@ -653,11 +658,11 @@
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
       <WorkToMake>8000</WorkToMake>
-	 <generateCommonality>0.04</generateCommonality>
+	 <generateCommonality>0.02</generateCommonality>
 	  <MarketValue>800</MarketValue>
     </statBases>
     <costList>
-      <TEKSteel>5</TEKSteel>
+      <Plasteel>25</Plasteel>
       <Chemfuel>80</Chemfuel>
     </costList>
     <weaponTags>
@@ -737,7 +742,8 @@
     </graphicData>
     <soundInteract>Bow_Recurve</soundInteract>
     <costList>
-      <TEKSteel>15</TEKSteel>
+      <Steel>120</Steel>
+	  <Plasteel>120</Plasteel>
 	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
@@ -749,7 +755,7 @@
       <AccuracyMedium>0.65</AccuracyMedium>
       <AccuracyLong>0.55</AccuracyLong>
       <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
-	  <generateCommonality>0.002</generateCommonality>
+	  <generateCommonality>0.01</generateCommonality>
 	  <MarketValue>2000</MarketValue>
     </statBases>
     <weaponTags>
@@ -794,8 +800,8 @@
     </tools>
     <rotateInShelves>false</rotateInShelves>
   </ThingDef>
-
-
+  
+  
 <ThingDef ParentName="BaseBullet">
     <defName>STEK_Judicator_Arrow</defName>
     <label>Judicator Frost Arrow</label>
@@ -868,13 +874,14 @@
 	  <li>RedMechTek</li>
     </weaponTags>
     <costList>
-      <TEKSteel>55</TEKSteel>
-      <ComponentSpacer>3</ComponentSpacer>
+      <Steel>200</Steel>
+	  <Plasteel>180</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
       <Chemfuel>200</Chemfuel>
     </costList>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>12</Crafting>
+        <Crafting>15</Crafting>
       </skillRequirements>
       <displayPriority>455</displayPriority>
       <researchPrerequisite>Fabrication</researchPrerequisite>
@@ -883,7 +890,7 @@
         <li>TableMachining</li>
       </recipeUsers>
     </recipeMaker>
-
+   
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -922,11 +929,11 @@
       </li>
     </tools>
   </ThingDef>
-
-
-
-
-
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseBullet">
     <defName>STEK_Firebomb_Launcher_shot</defName>
     <label>Tek Firebomb Bolt</label>
@@ -1018,11 +1025,11 @@
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>3.33</RangedWeapon_Cooldown>
       <WorkToMake>8000</WorkToMake>
-	  	  <generateCommonality>0.05</generateCommonality>
+	  	  <generateCommonality>0.02</generateCommonality>
 	  <MarketValue>900</MarketValue>
     </statBases>
     <costList>
-      <TEKSteel>40</TEKSteel>
+      <Plasteel>40</Plasteel>
       <Wastepack>15</Wastepack>
     </costList>
     <weaponTags>
@@ -1104,7 +1111,7 @@
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
-
+   
     <statBases>
       <WorkToMake>80000</WorkToMake>
       <Mass>5.4</Mass>
@@ -1119,8 +1126,9 @@
 	  <li>GreenMechTekMechTek</li>
     </weaponTags>
     <costList>
-      <TEKSteel>55</TEKSteel>
-      <ComponentSpacer>9</ComponentSpacer>
+      <Steel>180</Steel>
+	  <Plasteel>180</Plasteel>
+      <ComponentIndustrial>9</ComponentIndustrial>
       <Wastepack>90</Wastepack>
     </costList>
     <recipeMaker>
@@ -1181,11 +1189,11 @@
       </li>
     </tools>
   </ThingDef>
-
-
-
-
-
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseBullet">
     <defName>STEK_Toxbomb_Launcher_shot</defName>
     <label>Tek Tox Grenade shot</label>
@@ -1211,7 +1219,7 @@
       <shadowSize>0.6</shadowSize>
     </projectile>
 
-
+	  
   </ThingDef>
 
 
@@ -1277,12 +1285,13 @@
 	  <li>IndustrialGunAdvanced</li>
 	  <li>RotMechTekMechTek</li>
     </weaponTags>
-
+    
     <costList>
-      <TEKSteel>40</TEKSteel>
+      <Steel>180</Steel>
+	  <Plasteel>180</Plasteel>
       <ComponentIndustrial>14</ComponentIndustrial>
-      <Wastepack>20</Wastepack>
-      <Chemfuel>20</Chemfuel>
+      <Wastepack>60</Wastepack>
+      <Chemfuel>60</Chemfuel>
     </costList>
     <recipeMaker>
       <skillRequirements>
@@ -1342,11 +1351,11 @@
       </li>
     </tools>
   </ThingDef>
-
-
-
-
-
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseBullet">
     <defName>STEK_Rotbomb_Launcher_shot</defName>
     <label>Tek Stink Grenade shot</label>
@@ -1419,7 +1428,8 @@
 	  <li>PurpleMechTekMechTek</li>
     </weaponTags>
     <costList>
-      <TEKSteel>70</TEKSteel>
+      <Steel>200</Steel>
+	  <Plasteel>400</Plasteel>
       <ComponentSpacer>14</ComponentSpacer>
     </costList>
     <recipeMaker>
@@ -1471,11 +1481,11 @@
       </li>
     </tools>
   </ThingDef>
-
-
-
-
-
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseBullet">
     <defName>STEK_Thumpbomb_Launcher_shot</defName>
     <label>Tek thump Grenade shot</label>
@@ -1545,7 +1555,7 @@
 	  <drawSize>1.75</drawSize>
     </graphicData>
     <soundInteract>ICX_Pickup</soundInteract>
-
+    
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
@@ -1558,8 +1568,9 @@
 	 <weaponTags>
     </weaponTags>
     <costList>
-      <TEKSteel>300</TEKSteel>
-      <ComponentSpacer>30</ComponentSpacer>
+      <Steel>400</Steel>
+	  <Plasteel>400</Plasteel>
+      <ComponentSpacer>27</ComponentSpacer>
     </costList>
     <recipeMaker>
       <skillRequirements>
@@ -1609,11 +1620,11 @@
       </li>
     </tools>
   </ThingDef>
-
-
-
-
-
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseBullet">
     <defName>STEK_ICX_ROCK_CANNON</defName>
     <label>Tek ICX Rock Cannon Shell</label>
@@ -1693,7 +1704,7 @@
 
 
 
-
+  
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Tek_ChargeLance</defName>
     <label>Tek charge lance</label>
@@ -1727,7 +1738,7 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <TEKSteel>20</TEKSteel>
+      <Plasteel>80</Plasteel>
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
     <weaponTags>
@@ -1825,8 +1836,8 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <TEKSteel>55</TEKSteel>
-      <ComponentSpacer>3</ComponentSpacer>
+      <Plasteel>120</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
       <Chemfuel>60</Chemfuel>
     </costList>
     <weaponTags>
@@ -1930,7 +1941,7 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <TEKSteel>55</TEKSteel>
+      <Plasteel>120</Plasteel>
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <weaponTags>
@@ -2037,7 +2048,7 @@
       <AccuracyMedium>0.80</AccuracyMedium>
       <AccuracyLong>0.30</AccuracyLong>
       <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
-	  <generateCommonality>0.05</generateCommonality>
+	  <generateCommonality>0.01</generateCommonality>
     </statBases>
        <weaponTags>
       <li>SpacerGun</li>
@@ -2050,9 +2061,10 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <costList>
-      <TEKSteel>15</TEKSteel>
-      <ComponentIndustrial>5</ComponentIndustrial>
-      <Uranium>25</Uranium>
+      <Plasteel>175</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Uranium>45</Uranium>
+	  <Steel>200</Steel>
     </costList>
     <recipeMaker>
       <recipeUsers Inherit="False">
@@ -2061,8 +2073,8 @@
       </recipeUsers>
       <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
       <skillRequirements>
-        <Crafting>5</Crafting>
-        <Intellectual>5</Intellectual>
+        <Crafting>10</Crafting>
+        <Intellectual>10</Intellectual>
       </skillRequirements>
     </recipeMaker>
     <verbs>

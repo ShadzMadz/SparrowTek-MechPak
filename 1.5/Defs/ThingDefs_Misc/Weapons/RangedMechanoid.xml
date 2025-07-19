@@ -89,22 +89,22 @@
       </li>
     </verbs>
   </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <ThingDef ParentName="BaseBullet">
     <defName>Laser_TekBlasterGreen</defName>
     <label>Laser</label>
@@ -172,7 +172,7 @@
     <defName>Laser_TekBlasterTox</defName>
     <destroyOnDrop>true</destroyOnDrop>
     <weaponTags>
-      <li>TekGreenCentipede</li>
+      <li>TekGreen</li>
 	  <li>TekSupport</li>
     </weaponTags>
  <verbs>
@@ -540,9 +540,9 @@
         </targetParams>
       </li>
     </verbs>
-
-
-
+    
+	
+	
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_EMPTEKLauncher</defName>
@@ -1087,22 +1087,7 @@
 
 
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>Tek_Militor_Laser</defName>
-    <label>Laser</label>
-    <graphicData>
-      <texPath>Things/Projectile/Tek_blast</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <armorPenetrationBase>0.12</armorPenetrationBase>
-      <stoppingPower>2.5</stoppingPower>
-      <speed>130</speed>
-    </projectile>
-    </ThingDef>
+
 
 
 
@@ -1122,13 +1107,13 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>6</damageAmountBase>
-      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <damageAmountBase>3</damageAmountBase>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
       <stoppingPower>1</stoppingPower>
       <speed>130</speed>
     </projectile>
     </ThingDef>
-
+  
     <ThingDef Abstract="True" ParentName="BaseGun" Name="Mini_TekBlaster">
     <label>Tek Mini Blaster</label>
     <description>A mini tek blaster designed for bucklers and sentrys.</description>
@@ -1164,7 +1149,7 @@
     </tools>
     <relicChance>0</relicChance>
     </ThingDef>
-
+  
     <ThingDef ParentName="Mini_TekBlaster">
     <defName>Tek_blasterMini</defName>
     <destroyOnDrop>true</destroyOnDrop>
@@ -1187,63 +1172,8 @@
       </li>
     </verbs>
     </ThingDef>
+  
 
-    <ThingDef ParentName="Tek_MilitorGun">
-    <defName>Tek_MilitorGun</defName>
-    <destroyOnDrop>true</destroyOnDrop>
-    <weaponTags>
-    <li>Tek_MilitorEquip</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Tek_Militor_Laser</defaultProjectile>
-        <warmupTime>1</warmupTime>
-        <range>11</range>
-        <burstShotCount>1</burstShotCount>
-        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <soundCast>Shot_ChargeBlaster</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    </ThingDef>
-
-    <ThingDef Abstract="True" ParentName="BaseGun" Name="Tek_MilitorGun">
-    <label>Tek Militor Blaster</label>
-    <description>A mini tek blaster designed for Tek Militors.</description>
-    <graphicData>
-       <texPath>Things/Weapons/ChargeGun</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>200</MarketValue>
-      <Mass>30</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.75</AccuracyShort>
-      <AccuracyMedium>0.65</AccuracyMedium>
-      <AccuracyLong>0.60</AccuracyLong>
-      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
-    </statBases>
-    <techLevel>Spacer</techLevel>
-    <generateCommonality>0.3</generateCommonality>
-    <tradeability>None</tradeability>
-    <weaponClasses>
-      <li>Tek_MilitorEquip</li>
-    </weaponClasses>
-    <tools>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>6</power>
-        <cooldownTime>2.6</cooldownTime>
-      </li>
-    </tools>
-    <relicChance>0</relicChance>
-    </ThingDef>
 
 
 </Defs>
