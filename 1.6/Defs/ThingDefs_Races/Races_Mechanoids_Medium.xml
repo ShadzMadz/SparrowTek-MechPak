@@ -35,10 +35,10 @@
       <disarmedByEmpForTicks>7400</disarmedByEmpForTicks>
       <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
     </li>
-    <!--<li Class="Mech_Invisibility.CompProperties_Invisibility">
+<li Class="Mech_Invisibility.CompProperties_Invisibility">
       <durationTicksRange>900~1800</durationTicksRange>
-  <hediff>Mech_TekLancer_Invisibility</hediff>
-</li>-->
+  <hediff>Mech_TekScyther_Invisibility</hediff>
+</li>
   </comps>
 
   <tools>
@@ -168,7 +168,6 @@
 </PawnKindDef>
 
 
-<!--
 <AbilityDef>
   <defName>Mech_TekScyther_Invisibility</defName>
   <label>Active cloak</label>
@@ -210,7 +209,6 @@
     <li Class="HediffCompProperties_DisappearsOnDeath"/>
   </comps>
 </HediffDef>
--->
 
 
 
