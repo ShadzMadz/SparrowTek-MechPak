@@ -1417,8 +1417,8 @@
       <li>
 	    <verbClass>Verb_Shoot</verbClass>
 		<defaultProjectile>STEK_Firebomb_Launcher_shot</defaultProjectile>
-        <range>25</range>
-		<minRange>7</minRange>
+        <range>30</range>
+		<minRange>13</minRange>
     <forcedMissRadius>1.5</forcedMissRadius>
         <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
         <burstShotCount>1</burstShotCount>
@@ -1427,7 +1427,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
 		<linkedBodyPartsGroup>BulbLauncher</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>false</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<defaultCooldownTime>17</defaultCooldownTime>
+		<defaultCooldownTime>20</defaultCooldownTime>
       </li>
     </verbs>
   </ThingDef>

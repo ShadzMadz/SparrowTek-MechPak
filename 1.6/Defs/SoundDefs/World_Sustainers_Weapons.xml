@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	
+
 	<!-- ======================== Tek_Blaster ======================== -->
 	<SoundDef>
 		<defName>Tek_Blaster</defName>
@@ -25,7 +25,55 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+
+	<SoundDef>
+		<defName>Tek_Blue_DMRPickup</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Tek_Blue_DMRPickup</clipPath>
+					</li>
+				</grains>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.337647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>Tek_Blue_DMRFire</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Tek_Blue_DMRFire</clipPath>
+					</li>
+				</grains>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.337647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
 
 	<SoundDef>
 		<defName>ICX_Shot</defName>
@@ -103,7 +151,7 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+
 	<SoundDef>
 		<defName>Tek_Grenade_Launcher_Pickup</defName>
 		<context>MapOnly</context>
@@ -127,7 +175,7 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+
 	<SoundDef>
 		<defName>Tek_Grenade_Launcher_Fire</defName>
 		<context>MapOnly</context>
@@ -151,7 +199,7 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+
 
 
 

@@ -48,7 +48,7 @@
       <drawSize>1.25</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <MarketValue>7000</MarketValue>
       <WorkToMake>50000</WorkToMake>
@@ -177,7 +177,7 @@
       <drawSize>1.25</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <MarketValue>6000</MarketValue>
       <WorkToMake>150000</WorkToMake>
@@ -294,7 +294,7 @@
       <drawSize>1.25</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <MarketValue>6000</MarketValue>
       <WorkToMake>150000</WorkToMake>
@@ -419,7 +419,7 @@
       <drawSize>1.25</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <MarketValue>2000</MarketValue>
       <WorkToMake>100000</WorkToMake>
@@ -553,7 +553,7 @@
       <drawSize>1.25</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <WorkToMake>120000</WorkToMake>
       <Mass>6</Mass>
@@ -687,7 +687,7 @@
     </verbs>
     <comps>
       <li Class="CompProperties_Explosive">
-        <explosiveRadius>4</explosiveRadius>
+        <explosiveRadius>3.5</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
       </li>
@@ -717,8 +717,89 @@
     </graphicData>
   </ThingDef>
 
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>Weapon_Tek_EMP_Grenade</defName>
+    <label>Tek EMPBombs</label>
+    <description>Fragile containers filled with compressed energy, when thrown they will burst a strong EMP wave. </description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisite>Machining</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Weapons/STEK_EMP_grenades_Pak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+      <WorkToMake>8000</WorkToMake>
+   <generateCommonality>0.04</generateCommonality>
+    <MarketValue>800</MarketValue>
+    </statBases>
+    <costList>
+      <TEKSteel>5</TEKSteel>
+      <ComponentIndustrial>80</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw Tek EMPbomb</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>23</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>2</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>STEK_EMPBomb</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>9</explosiveRadius>
+        <explosiveDamageType>EMP</explosiveDamageType>
+        <requiredDamageTypeToExplode>Bomb</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+    <rotateInShelves>false</rotateInShelves>
+  </ThingDef>
 
-
+  <ThingDef ParentName="BaseGrenadeProjectile">
+     <defName>STEK_EMPBomb</defName>
+     <label>EMP grenade</label>
+     <thingClass>Projectile_Explosive</thingClass>
+     <graphicData>
+       <texPath>Things/Projectile/Tek_EMPbomb</texPath>
+       <graphicClass>Graphic_Single</graphicClass>
+ 	  <drawSize>0.75</drawSize>
+     </graphicData>
+     <projectile>
+ 	<damageAmountBase>20</damageAmountBase>
+       <speed>12</speed>
+       <damageDef>EMP</damageDef>
+       <explosionRadius>9</explosionRadius>
+ 	  <explosionDelay>22</explosionDelay>
+ 	  <postExplosionGasType>BlindSmoke</postExplosionGasType>
+       <preExplosionSpawnChance>4</preExplosionSpawnChance>
+       <ai_IsIncendiary>true</ai_IsIncendiary>
+       <arcHeightFactor>0.9</arcHeightFactor>
+       <shadowSize>0.6</shadowSize>
+     </projectile>
+   </ThingDef>
 
 
 
@@ -817,26 +898,6 @@
 	  </extraDamages>
     </projectile>
   </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -939,10 +1000,10 @@
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-	<damageAmountBase>37</damageAmountBase>
+	<damageAmountBase>27</damageAmountBase>
       <speed>45</speed>
       <damageDef>Flame</damageDef>
-      <explosionRadius>3</explosionRadius>
+      <explosionRadius>3.9</explosionRadius>
       <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
       <preExplosionSpawnChance>4</preExplosionSpawnChance>
       <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -954,44 +1015,112 @@
 
 
 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>STEK_EMPbomb_Launcher</defName>
+    <label>EMPBomb Launcher</label>
+    <description>A grenade launcher, designed to shoot Sparrow Tek EMP grenades at a very high velocity.</description>
+    <graphicData>
+      <texPath>Things/Weapons/STEK_EMP_Grenade_Launcher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.75</drawSize>
+    </graphicData>
+    <soundInteract>Tek_Grenade_Launcher_Pickup</soundInteract>
+    <generateCommonality>0.3</generateCommonality>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>5.4</Mass>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+	  <generateCommonality>0.10</generateCommonality>
+	  <MarketValue>2000</MarketValue>
+    </statBases>
+	 <weaponTags>
+      <li>GrenadeDestructive</li>
+	  <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <costList>
+      <TEKSteel>55</TEKSteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>455</displayPriority>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>STEK_EMPbomb_Launcher_shot</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <range>37</range>
+        <forcedMissRadius>3</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+		<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <soundCast>Tek_Grenade_Launcher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <ThingDef ParentName="BaseBullet">
+    <defName>STEK_EMPbomb_Launcher_shot</defName>
+    <label>Tek EMPbomb Bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Tek_EMPbomb</texPath>
+	  <drawSize>0.5</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(104,104,256)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+	<damageAmountBase>37</damageAmountBase>
+      <speed>45</speed>
+      <damageDef>EMP</damageDef>
+      <explosionRadius>9</explosionRadius>
+      <preExplosionSpawnChance>4</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.9</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
 
 
 
@@ -1645,55 +1774,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Tek_ChargeLance</defName>
     <label>Tek charge lance</label>
@@ -1704,7 +1784,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <soundInteract>Interact_ChargeLance</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <Mass>10</Mass>
@@ -1732,8 +1812,6 @@
     </costList>
     <weaponTags>
       <li>MechanoidGunMedium</li>
-      <li>RedLancerTek</li>
-      <li>BlueLancerTek</li>
       <li>SpacerGun</li>
       <li>VFE_AdvMechanoidGunMedium</li>
     </weaponTags>
@@ -1802,7 +1880,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <soundInteract>Interact_ChargeLance</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <Mass>10</Mass>
@@ -1907,7 +1985,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <soundInteract>Interact_ChargeLance</soundInteract>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <Mass>10</Mass>
@@ -2024,10 +2102,10 @@
     <graphicData>
       <texPath>Things/Weapons/STEK_PulseRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.25</drawSize>
+      <drawSize>1.75</drawSize>
     </graphicData>
-    <uiIconScale>1.2</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <uiIconScale>1.5</uiIconScale>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
     <statBases>
       <MarketValue>1100</MarketValue>
       <WorkToMake>150000</WorkToMake>
@@ -2105,17 +2183,507 @@
 
 
 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_STEK_Blue_DMR</defName>
+    <label>Tek Blue DMR</label>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeEMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <stoppingPower>1.35</stoppingPower>
+      <speed>150</speed>
+      <extraDamages>
+        <li>
+            <def>EMP</def>
+            <amount>10</amount>
+            <chance>1</chance>
+          </li>
+      </extraDamages>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RangedWeaponUltratech">
+    <defName>STEK_Blue_DMR</defName>
+    <label>Tek Blue DMR</label>
+    <description>A Special Designated Marksman Rifle by Sparrow Tek Industries, This rifle is a mid range single shot rifle with decent long and short range capabilities, often used to deal with Pikeman and Militor mechanoids. It can hold its own in both scenarios where the user might be cornered by Militors or pinned down at long range by Pikemen. It's EMP effects give it an edge against other mechanoids and certain entities. </description>
+    <graphicData>
+      <texPath>Things/Weapons/TEK_BlueDMR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.75</drawSize>
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <WorkToMake>150000</WorkToMake>
+      <Mass>6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+	  <generateCommonality>0.05</generateCommonality>
+    </statBases>
+       <weaponTags>
+<li>BlueTek</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <costList>
+      <TEKSteel>25</TEKSteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Uranium>5</Uranium>
+    </costList>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+        <Intellectual>3</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_STEK_Blue_DMR</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>36</range>
+        <soundCast>Tek_Blue_DMRFire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Cut</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
 
 
 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_STEK_Red_BR</defName>
+    <label>Tek Red BR</label>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeRed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+      <stoppingPower>1.35</stoppingPower>
+      <speed>150</speed>
+      <extraDamages>
+        <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>1</chance>
+          </li>
+      </extraDamages>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RangedWeaponUltratech">
+    <defName>STEK_Red_BR</defName>
+    <label>Tek Red BR</label>
+    <description>A Special Designated Marksman Rifle by Sparrow Tek Industries, This rifle is a mid range single shot rifle with decent long and short range capabilities, the battle rifle fires in short bursts making it great at taking down enemies from a safe range. It's Flame effects detroys entities with ease but isn't as effective against mechanoids. </description>
+    <graphicData>
+      <texPath>Things/Weapons/TEK_RedBR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Tek_Blue_DMRPickup</soundInteract>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <WorkToMake>150000</WorkToMake>
+      <Mass>6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+	  <generateCommonality>0.05</generateCommonality>
+    </statBases>
+       <weaponTags>
+<li>RedTek</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <costList>
+      <TEKSteel>25</TEKSteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Uranium>5</Uranium>
+    </costList>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+        <Intellectual>3</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_STEK_Red_BR</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>29</range>
+        <soundCast>Tek_Imperialist</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Cut</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
 
 
 
+  <ThingDef ParentName="RangedWeaponUltratech">
+      <defName>Tek_RedBlazeHeatLine</defName>
+      <label>Tek Blaze HeadLine</label>
+      <description>A Flame Thrower manufactured by Sparrow Tek Industries, this weapon sprays fiery hot liquid gas and ignites it mid air before it touches the ground, scorching anyone in its path, extremely effective against entities and organic creatures, no effect on mechanoids. Handle with care when using inside!</description>
+      <tradeability>None</tradeability>
+
+      <graphicData>
+        <texPath>Things/Weapons/Tek_RedBlazeHeatLine</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.75</drawSize>
+      </graphicData>
+      <uiIconScale>0.85</uiIconScale>
+      <soundInteract>Tek_Blue_DMRPickup</soundInteract>
+      <statBases>
+        <MarketValue>1900</MarketValue>
+        <WorkToMake>150000</WorkToMake>
+        <Mass>6</Mass>
+        <AccuracyTouch>1</AccuracyTouch>
+        <AccuracyShort>1</AccuracyShort>
+        <AccuracyMedium>1</AccuracyMedium>
+        <AccuracyLong>1</AccuracyLong>
+        <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+  	  <generateCommonality>0.05</generateCommonality>
+      </statBases>
+      <weaponTags>
+        <li>TekHeatLine</li>
+      </weaponTags>
+      <weaponClasses>
+        <li>RangedHeavy</li>
+      </weaponClasses>
+      <costList>
+        <TEKSteel>35</TEKSteel>
+        <ComponentIndustrial>5</ComponentIndustrial>
+        <Chemfuel>150</Chemfuel>
+        <Uranium>5</Uranium>
+      </costList>
+      <recipeMaker>
+        <recipeUsers Inherit="False">
+          <li>FabricationBench</li>
+          <li>TableMachining</li>
+        </recipeUsers>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <skillRequirements>
+          <Crafting>5</Crafting>
+          <Intellectual>3</Intellectual>
+        </skillRequirements>
+      </recipeMaker>
+      <verbs>
+        <li>
+  	    <verbClass>Verb_SpewFire</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+          <range>9</range>
+  		<minRange>0</minRange>
+          <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+          <burstShotCount>15</burstShotCount>
+          <soundCast>Shot_MiniFlameblaster</soundCast>
+          <muzzleFlashScale>9</muzzleFlashScale>
+  		<defaultCooldownTime>9</defaultCooldownTime>
+        </li>
+      </verbs>
+      <tools>
+        <li>
+          <label>grip</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+        <li>
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+            <li>Cut</li>
+          </capacities>
+          <power>3</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+      </tools>
+    </ThingDef>
 
 
 
+    <ThingDef ParentName="BaseBullet">
+      <defName>Bullet_STEK_Blue_Assault</defName>
+      <label>Tek Assault Shot</label>
+      <graphicData>
+        <texPath>Things/Projectile/ChargeEMP</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+      </graphicData>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>8</damageAmountBase>
+        <armorPenetrationBase>0.65</armorPenetrationBase>
+        <stoppingPower>1.35</stoppingPower>
+        <speed>130</speed>
+        <extraDamages>
+          <li>
+              <def>EMP</def>
+              <amount>10</amount>
+              <chance>1</chance>
+            </li>
+        </extraDamages>
+      </projectile>
+    </ThingDef>
 
+    <ThingDef ParentName="RangedWeaponUltratech">
+      <defName>STEK_Blue_Assault_Rifle</defName>
+      <label>Tek E38 Assault Rifle</label>
+      <description>An Assault Rifle manufactured by Sparrow Tek Industries, This assault rifle is a solid weapon with a great rate of fire and a decent amount of mid range accuracy. going above avarage against all enemy types. </description>
+      <graphicData>
+        <texPath>Things/Weapons/STEK_Blue_Assault_Rifle</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.25</drawSize>
+      </graphicData>
+      <uiIconScale>1.25</uiIconScale>
+      <soundInteract>Tek_Blue_DMRPickup</soundInteract>
+      <statBases>
+        <MarketValue>1500</MarketValue>
+        <WorkToMake>150000</WorkToMake>
+        <Mass>6</Mass>
+        <AccuracyTouch>0.90</AccuracyTouch>
+        <AccuracyShort>0.65</AccuracyShort>
+        <AccuracyMedium>0.85</AccuracyMedium>
+        <AccuracyLong>0.70</AccuracyLong>
+        <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <generateCommonality>0.05</generateCommonality>
+      </statBases>
+         <weaponTags>
+    <li>BlueLancerTek</li>
+      </weaponTags>
+      <weaponClasses>
+        <li>RangedHeavy</li>
+      </weaponClasses>
+      <costList>
+        <TEKSteel>35</TEKSteel>
+        <ComponentIndustrial>5</ComponentIndustrial>
+        <Uranium>5</Uranium>
+      </costList>
+      <recipeMaker>
+        <recipeUsers Inherit="False">
+          <li>FabricationBench</li>
+          <li>TableMachining</li>
+        </recipeUsers>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <skillRequirements>
+          <Crafting>7</Crafting>
+          <Intellectual>3</Intellectual>
+        </skillRequirements>
+      </recipeMaker>
+      <verbs>
+        <li>
+          <verbClass>Verb_Shoot</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <defaultProjectile>Bullet_STEK_Blue_Assault</defaultProjectile>
+          <warmupTime>3</warmupTime>
+          <range>26</range>
+          <soundCast>Tek_Blue_DMRFire</soundCast>
+          <soundCastTail>GunTail_Heavy</soundCastTail>
+          <muzzleFlashScale>9</muzzleFlashScale>
+      <burstShotCount>6</burstShotCount>
+          <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        </li>
+      </verbs>
+      <tools>
+        <li>
+          <label>grip</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+        <li>
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+            <li>Cut</li>
+          </capacities>
+          <power>3</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+      </tools>
+    </ThingDef>
 
+    <ThingDef ParentName="BaseBullet">
+      <defName>Bullet_STEK_Red_SMG</defName>
+      <label>Tek SMG shot</label>
+      <graphicData>
+        <texPath>Things/Projectile/TEK_SMG_Bolt</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.15</drawSize>
+      </graphicData>
+      <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>2</damageAmountBase>
+        <armorPenetrationBase>0.35</armorPenetrationBase>
+        <stoppingPower>1.05</stoppingPower>
+        <speed>110</speed>
+        <extraDamages>
+          <li>
+              <def>Burn</def>
+              <amount>1</amount>
+              <chance>1</chance>
+            </li>
+        </extraDamages>
+      </projectile>
+    </ThingDef>
 
+    <ThingDef ParentName="RangedWeaponUltratech">
+      <defName>STEK_Red_SMG</defName>
+      <label>Tek F52 SMG</label>
+      <description>A Sub machine gun by Sparrow Tek Industries, this machine gun is small compact easy to make and effective indoors, handy for clearing out riots, it is weak but in the right hands it can be deadly. </description>
+      <graphicData>
+        <texPath>Things/Weapons/TEK_REDSMG</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1</drawSize>
+      </graphicData>
+      <uiIconScale>1.0</uiIconScale>
+      <soundInteract>Tek_Blue_DMRPickup</soundInteract>
+      <statBases>
+        <MarketValue>1500</MarketValue>
+        <WorkToMake>150000</WorkToMake>
+        <Mass>6</Mass>
+        <AccuracyTouch>1</AccuracyTouch>
+        <AccuracyShort>0.98</AccuracyShort>
+        <AccuracyMedium>0.65</AccuracyMedium>
+        <AccuracyLong>0.10</AccuracyLong>
+        <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <generateCommonality>0.05</generateCommonality>
+      </statBases>
+         <weaponTags>
+    <li>RedLancerTek</li>
+      </weaponTags>
+      <weaponClasses>
+        <li>Rangedlight</li>
+      </weaponClasses>
+      <costList>
+        <TEKSteel>35</TEKSteel>
+        <ComponentIndustrial>3</ComponentIndustrial>
+        <Uranium>5</Uranium>
+      </costList>
+      <recipeMaker>
+        <recipeUsers Inherit="False">
+          <li>FabricationBench</li>
+          <li>TableMachining</li>
+        </recipeUsers>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <skillRequirements>
+          <Crafting>5</Crafting>
+          <Intellectual>3</Intellectual>
+        </skillRequirements>
+      </recipeMaker>
+      <verbs>
+        <li>
+          <verbClass>Verb_Shoot</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <defaultProjectile>Bullet_STEK_Red_SMG</defaultProjectile>
+          <warmupTime>1.5</warmupTime>
+          <range>18</range>
+          <soundCast>Tek_Imperialist</soundCast>
+          <soundCastTail>GunTail_Heavy</soundCastTail>
+          <muzzleFlashScale>9</muzzleFlashScale>
+      <burstShotCount>12</burstShotCount>
+          <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        </li>
+      </verbs>
+      <tools>
+        <li>
+          <label>grip</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+        <li>
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+            <li>Cut</li>
+          </capacities>
+          <power>3</power>
+          <cooldownTime>2</cooldownTime>
+        </li>
+      </tools>
+    </ThingDef>
 
 </Defs>

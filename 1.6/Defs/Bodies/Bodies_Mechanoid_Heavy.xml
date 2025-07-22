@@ -46,12 +46,12 @@
       <li>
         <def>HearingSensor</def>
         <customLabel>Left hearing sensor</customLabel>
-        <coverage>0.02</coverage>
+        <coverage>0.01</coverage>
       </li>
       <li>
         <def>HearingSensor</def>
         <customLabel>Right hearing sensor</customLabel>
-        <coverage>0.02</coverage>
+        <coverage>0.01</coverage>
       </li>
       <li>
         <def>ArtificialBrain</def>
@@ -62,6 +62,12 @@
       <li>
         <def>SmellSensor</def>
         <coverage>0.02</coverage>
+      </li>
+      <li>
+        <def>FluidReprocessor</def>
+        <customLabel>Head Fluid Filter</customLabel>
+        <coverage>0.02</coverage>
+        <depth>Inside</depth>
       </li>
 
       <!-- Primary Armor Rings and Internals -->
