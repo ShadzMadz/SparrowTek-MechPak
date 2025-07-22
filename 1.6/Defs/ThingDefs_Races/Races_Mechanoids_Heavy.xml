@@ -185,7 +185,7 @@
         <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
       </li>
 
-      <!--
+
       <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
           <maxPawnCapacity>3</maxPawnCapacity>
           <captureCommand>
@@ -201,7 +201,7 @@
           <captureJob>CVN_CapturePawn</captureJob>
           <releaseJob>CVN_ReleasePawn</releaseJob>
       </li>
-      -->
+
 
 
 	  <li Class="CompProperties_TurretGun">
@@ -338,7 +338,7 @@
       <BandwidthCost>2</BandwidthCost>
     </statBases>
 	<comps>
-    <!--
+
     <li Class="taranchuk_mobilecrypto.CompProperties_MobileCrypto">
         <maxPawnCapacity>3</maxPawnCapacity>
         <captureCommand>
@@ -354,7 +354,7 @@
         <captureJob>CVN_CapturePawn</captureJob>
         <releaseJob>CVN_ReleasePawn</releaseJob>
     </li>
-    -->
+
 
 	</comps>
   </ThingDef>
